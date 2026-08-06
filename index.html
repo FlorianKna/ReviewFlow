@@ -146,6 +146,19 @@
     font-size: 14.5px; color: var(--ink);
   }
   .seo-callout strong { color: var(--accent-dark); }
+  .stat-strip {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 28px; max-width: 940px; margin: 40px auto 0;
+  }
+  .stat-lead {
+    text-align: center; color: var(--accent-dark); font-weight: 700; font-size: 12.5px;
+    letter-spacing: 0.08em; text-transform: uppercase; margin: 0 auto 20px;
+  }
+  .stat-item { text-align: center; padding: 6px 10px; }
+  .stat-item .stat-num { font-size: 38px; font-weight: 800; letter-spacing: -0.02em; color: var(--accent-dark); line-height: 1.05; margin-bottom: 8px; }
+  .stat-item .stat-label { font-size: 13.5px; color: var(--ink); margin-bottom: 6px; }
+  .stat-item .stat-source { font-size: 11px; color: var(--faint); }
+  @media (max-width: 620px) { .stat-strip { grid-template-columns: 1fr 1fr; } }
   .how-section { background: var(--bg-alt); }
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 980px; margin: 0 auto; }
   .step { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 28px; }
@@ -327,6 +340,24 @@
     </div>
     <button class="carousel-arrow next" onclick="scrollCarousel('whyTrack',1)" aria-label="Next">&#8250;</button>
   </div>
+  <div class="stat-lead" data-i18n="stat_trust_lead">The numbers behind it</div>
+  <div class="stat-strip">
+    <div class="stat-item">
+      <div class="stat-num" data-i18n="stat1_num">80%</div>
+      <div class="stat-label" data-i18n="stat1_label">of consumers say they're more likely to use a business that replies to every review</div>
+      <div class="stat-source" data-i18n="stat1_source">BrightLocal, Local Consumer Review Survey 2026</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-i18n="stat2_num">50%</div>
+      <div class="stat-label" data-i18n="stat2_label">won't choose a business after a generic, copy-paste reply — personal beats templated</div>
+      <div class="stat-source" data-i18n="stat2_source">BrightLocal, Local Consumer Review Survey 2026</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-i18n="stat3_num">5–9%</div>
+      <div class="stat-label" data-i18n="stat3_label">more revenue from just one extra star of rating, for independent businesses</div>
+      <div class="stat-source" data-i18n="stat3_source">Harvard Business School, Luca (2016), Yelp.com study</div>
+    </div>
+  </div>
 </section>
 
 <section id="seo">
@@ -369,6 +400,19 @@
       </div>
     </div>
     <button class="carousel-arrow next" onclick="scrollCarousel('seoTrack',1)" aria-label="Next">&#8250;</button>
+  </div>
+  <div class="stat-lead" data-i18n="stat_seo_lead">What the data says</div>
+  <div class="stat-strip" style="max-width:620px;">
+    <div class="stat-item">
+      <div class="stat-num" data-i18n="stat4_num">20%</div>
+      <div class="stat-label" data-i18n="stat4_label">of a local ranking score comes from review signals — count, recency, and responses — per SEO industry experts</div>
+      <div class="stat-source" data-i18n="stat4_source">Whitespark, Local Search Ranking Factors 2026</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-i18n="stat5_num">89%</div>
+      <div class="stat-label" data-i18n="stat5_label">of consumers expect an owner to respond to their review at all</div>
+      <div class="stat-source" data-i18n="stat5_source">BrightLocal, Local Consumer Review Survey 2026</div>
+    </div>
   </div>
   <div class="seo-callout" data-i18n-html="seo_callout">
     <p><strong>What actually moves it:</strong> a steady stream of recent reviews beats a pile of old ones from years back, higher average ratings improve click-through, and reviews that naturally mention what you do help Google understand what you're known for. Replying to every review, quickly, signals an active business, builds trust with the next customer reading it, and tends to encourage more people to leave one in the first place.</p>
@@ -548,7 +592,7 @@
 var translations = {
   en: {
     nav_benefits:"Benefits", nav_google:"Google ranking", nav_how:"How it works", nav_pricing:"Pricing", nav_faq:"FAQ", nav_cta:"Start free month",
-    hero_eyebrow:"● AI-drafted, personally reviewed, never generic",
+    hero_eyebrow:"● I read every AI-drafted reply before it goes out",
     hero_h1:"Turn every review into a reason to trust you.",
     hero_sub:"I write a specific, thoughtful reply to every Google review your business gets and personally check each one before it goes live. Your first month is free.",
     hero_cta1:"Start your free month", hero_cta2:"See how it works",
@@ -556,7 +600,7 @@ var translations = {
     hero_mock_review:"\"Booked an appointment last minute and they still managed to fit me in. Great service!\"",
     hero_mock_reviewer:"— Jana N.",
     hero_mock_label:"Response from the owner",
-    hero_mock_reply:"Thank you so much, Jana! We're really glad we could help on short notice — see you next time.",
+    hero_mock_reply:"Ha, cutting it close, but we made it work! Really glad we could squeeze you in, Jana — see you at the next one.",
     why_kicker:"Why it matters", why_h2:"Reviews aren't background noise. They're your storefront.",
     why_p:"Most people read reviews before they read anything else about you. What they find next quietly decides whether they reach out.",
     why_card1_h:"First impression, handled", why_card1_p:"A sharp reply is often the first real thing a prospect learns about you, before you ever speak to them.",
@@ -571,12 +615,12 @@ var translations = {
     seo_card4_h:"Engagement", seo_card4_p:"Calls, direction requests, and website clicks from your listing signal to Google that people find you worth acting on.",
     seo_callout:"<p><strong>What actually moves it:</strong> a steady stream of recent reviews beats a pile of old ones from years back, higher average ratings improve click-through, and reviews that naturally mention what you do help Google understand what you're known for. Replying to every review, quickly, signals an active business, builds trust with the next customer reading it, and tends to encourage more people to leave one in the first place.</p>",
     how_kicker:"How it works", how_h2:"AI speed, human judgment, every single time",
-    how_p:"Fully AI-drafted, never AI-published without a human reading it first.",
+    how_p:"AI writes the first draft. I read every single one before it goes live.",
     how_step1_h:"Grant limited access", how_step1_p:"Add me as a Manager on your Google Business Profile in a couple of clicks. I can reply to reviews, but never touch your listing ownership or account.",
     how_step2_h:"AI drafts, I check", how_step2_p:"Every new review gets a reply drafted around what that customer actually said, then I personally read and adjust it before anything is approved.",
     how_step3_h:"You get the result", how_step3_p:"The reply goes live and you receive a short monthly recap of what customers are saying, so you're never out of the loop.",
     trust_h:"A new service, run by an actual person",
-    trust_p:"I'm Florian, based in Prague. ReviewFlow is a young, hands-on service, not a faceless SaaS tool. I personally read every review and check every reply that goes out under your name before it's ever posted. You're not handing this off to a black box, you're getting someone who treats your reputation like it matters, because it's also mine on the line.",
+    trust_p:"I'm Florian, based in Prague. ReviewFlow is a young, hands-on service, not a faceless SaaS tool — and reviews aren't new to me. I'm a Google Local Guide, Level 8, with close to 300 reviews written myself, so I've seen this from both sides: what makes a reply feel real, and what makes it feel like a form letter. I personally read every review and check every reply that goes out under your name before it's ever posted. You're not handing this off to a black box, you're getting someone who treats your reputation like it matters, because mine is on the line too.",
     pricing_kicker:"Pricing", pricing_h2:"Try it for free. Then it's simple, flat pricing.", pricing_p:"No per-review fees, no long contracts.",
     pricing_free_banner:"<strong>Your first month is completely free.</strong> Full service, real reviews, real replies, zero cost. Continue afterward only if it's clearly worth it to you.",
     price1_name:"Starter", price1_desc:"For smaller practices and shops", price1_freetag:"Free for month 1", price1_permonth:"/ month after", price1_altprice:"or 990 Kč / month",
@@ -590,7 +634,7 @@ var translations = {
     signup_note:"This opens an email to Florian.Knaeple@gmail.com with your details — hit send and I'll take it from there.",
     faq_kicker:"FAQ", faq_h2:"Good questions",
     faq1_q:"Do I need to give you my Google password?", faq1_a:"No. You add me as a \"Manager\" on your Business Profile, which lets me reply to reviews and edit basic info. I can never remove your listing, manage other users, or access your Google account itself.",
-    faq2_q:"Are the replies AI-written?", faq2_a:"Drafted with AI, always. Posted without a human reading it first, never. Every single reply is checked by me before it goes live under your name.",
+    faq2_q:"Are the replies AI-written?", faq2_a:"Every reply starts as an AI draft, then I read it, fix anything that sounds off, and only post it once it actually sounds like your business.",
     faq3_q:"What if I don't want to grant Manager access?", faq3_a:"That's fine. I can send you the drafted, reviewed replies each month by email instead, and you paste them in yourself. A little more work on your side, same quality of writing.",
     faq4_q:"Is my data safe?", faq4_a:"I only access what's needed to reply to reviews on your behalf, nothing more. Your data isn't sold or shared with anyone.",
     faq5_q:"Can I cancel anytime?", faq5_a:"Yes, including during the free month. No contracts, no lock-in.",
@@ -598,11 +642,18 @@ var translations = {
     footer_impressum_label:"Impressum", footer_operated:"ReviewFlow is operated by Florian Knäple", footer_email_label:"Email:",
     footer_privacy_h:"Privacy", footer_privacy_p1:"I only access the review and basic profile data needed to reply on your behalf via Google's Manager access.",
     footer_privacy_p2:"Your data is never sold or shared with third parties.", footer_privacy_p3:"Full privacy policy available on request.",
-    footer_bottom_text:"ReviewFlow · Run by Florian Knäple"
+    footer_bottom_text:"ReviewFlow · Run by Florian Knäple",
+    stat_trust_lead:"The numbers behind it",
+    stat1_num:"80%", stat1_label:"of consumers say they're more likely to use a business that replies to every review", stat1_source:"BrightLocal, Local Consumer Review Survey 2026",
+    stat2_num:"50%", stat2_label:"won't choose a business after a generic, copy-paste reply — personal beats templated", stat2_source:"BrightLocal, Local Consumer Review Survey 2026",
+    stat3_num:"5–9%", stat3_label:"more revenue from just one extra star of rating, for independent businesses", stat3_source:"Harvard Business School, Luca (2016), Yelp.com study",
+    stat_seo_lead:"What the data says",
+    stat4_num:"20%", stat4_label:"of a local ranking score comes from review signals — count, recency, and responses — per SEO industry experts", stat4_source:"Whitespark, Local Search Ranking Factors 2026",
+    stat5_num:"89%", stat5_label:"of consumers expect an owner to respond to their review at all", stat5_source:"BrightLocal, Local Consumer Review Survey 2026"
   },
   de: {
     nav_benefits:"Vorteile", nav_google:"Google-Ranking", nav_how:"So funktioniert's", nav_pricing:"Preise", nav_faq:"FAQ", nav_cta:"Gratismonat starten",
-    hero_eyebrow:"● KI-entworfen, persönlich geprüft, nie generisch",
+    hero_eyebrow:"● Ich lese jede KI-Antwort, bevor sie rausgeht",
     hero_h1:"Machen Sie aus jeder Bewertung einen Vertrauensbeweis.",
     hero_sub:"Ich schreibe eine konkrete, durchdachte Antwort auf jede Google-Bewertung Ihres Unternehmens und prüfe sie persönlich, bevor sie veröffentlicht wird. Der erste Monat ist kostenlos.",
     hero_cta1:"Gratismonat starten", hero_cta2:"So funktioniert's",
@@ -610,7 +661,7 @@ var translations = {
     hero_mock_review:"\"Kurzfristig einen Termin gebraucht und trotzdem noch reinbekommen. Toller Service!\"",
     hero_mock_reviewer:"— Jana N.",
     hero_mock_label:"Antwort des Inhabers",
-    hero_mock_reply:"Vielen Dank, Jana! Wir freuen uns, dass wir kurzfristig helfen konnten — bis zum nächsten Mal.",
+    hero_mock_reply:"Puh, das war knapp, aber wir haben es hinbekommen! Freut uns wirklich, dass es kurzfristig geklappt hat, Jana — bis zum nächsten Mal.",
     why_kicker:"Warum es wichtig ist", why_h2:"Bewertungen sind kein Hintergrundrauschen. Sie sind Ihr Schaufenster.",
     why_p:"Die meisten Menschen lesen zuerst Bewertungen, bevor sie sonst etwas über Sie erfahren. Was sie dort finden, entscheidet leise, ob sie sich melden.",
     why_card1_h:"Erster Eindruck, gesichert", why_card1_p:"Eine gute Antwort ist oft das Erste, was ein Interessent wirklich über Sie erfährt, noch bevor Sie miteinander sprechen.",
@@ -625,12 +676,12 @@ var translations = {
     seo_card4_h:"Interaktion", seo_card4_p:"Anrufe, Wegbeschreibungen und Website-Klicks von Ihrem Eintrag zeigen Google, dass Menschen Sie als handlungsrelevant empfinden.",
     seo_callout:"<p><strong>Was wirklich zählt:</strong> ein stetiger Strom aktueller Bewertungen schlägt einen Berg alter aus vergangenen Jahren, höhere Durchschnittsbewertungen verbessern die Klickrate, und Bewertungen, die natürlich erwähnen, was Sie tun, helfen Google zu verstehen, wofür Sie bekannt sind. Schnelles Antworten auf jede Bewertung signalisiert ein aktives Unternehmen, schafft Vertrauen beim nächsten Leser und ermutigt tendenziell mehr Menschen, ebenfalls eine Bewertung zu hinterlassen.</p>",
     how_kicker:"So funktioniert's", how_h2:"Geschwindigkeit von KI, Urteilsvermögen eines Menschen, jedes Mal",
-    how_p:"Vollständig KI-entworfen, nie ohne menschliche Prüfung veröffentlicht.",
+    how_p:"Die KI schreibt den ersten Entwurf. Ich lese jede einzelne Antwort, bevor sie live geht.",
     how_step1_h:"Begrenzten Zugriff gewähren", how_step1_p:"Fügen Sie mich mit wenigen Klicks als Manager zu Ihrem Google-Unternehmensprofil hinzu. Ich kann auf Bewertungen antworten, aber nie Ihr Eigentum am Eintrag oder Konto berühren.",
     how_step2_h:"KI entwirft, ich prüfe", how_step2_p:"Jede neue Bewertung erhält eine Antwort, die auf das eingeht, was der Kunde tatsächlich gesagt hat. Ich lese und passe sie persönlich an, bevor etwas freigegeben wird.",
     how_step3_h:"Sie erhalten das Ergebnis", how_step3_p:"Die Antwort geht online, und Sie erhalten eine kurze monatliche Zusammenfassung dessen, was Kunden sagen, damit Sie stets informiert sind.",
     trust_h:"Ein neuer Service, geführt von einer echten Person",
-    trust_p:"Ich bin Florian, ansässig in Prag. ReviewFlow ist ein junger, persönlich geführter Service, kein gesichtsloses SaaS-Tool. Ich lese jede Bewertung selbst und prüfe jede Antwort, bevor sie unter Ihrem Namen veröffentlicht wird. Sie übergeben das nicht an eine Blackbox, sondern an jemanden, dem Ihr Ruf genauso wichtig ist, weil meiner ebenfalls davon abhängt.",
+    trust_p:"Ich bin Florian, ansässig in Prag. ReviewFlow ist ein junger, persönlich geführter Service, kein gesichtsloses SaaS-Tool — und Bewertungen sind für mich kein Neuland. Ich bin Google Local Guide, Level 8, mit fast 300 selbst geschriebenen Bewertungen, kenne die Sache also von beiden Seiten: was eine Antwort echt wirken lässt und was nach Textbaustein klingt. Ich lese jede Bewertung selbst und prüfe jede Antwort, bevor sie unter Ihrem Namen veröffentlicht wird. Sie übergeben das nicht an eine Blackbox, sondern an jemanden, dem Ihr Ruf genauso wichtig ist, weil meiner ebenfalls davon abhängt.",
     pricing_kicker:"Preise", pricing_h2:"Kostenlos testen. Danach einfache Festpreise.", pricing_p:"Keine Gebühr pro Bewertung, keine langen Verträge.",
     pricing_free_banner:"<strong>Ihr erster Monat ist komplett kostenlos.</strong> Voller Service, echte Bewertungen, echte Antworten, keine Kosten. Danach nur weiterführen, wenn es sich für Sie klar lohnt.",
     price1_name:"Starter", price1_desc:"Für kleinere Praxen und Geschäfte", price1_freetag:"Monat 1 kostenlos", price1_permonth:"/ Monat danach", price1_altprice:"oder 990 Kč / Monat",
@@ -644,7 +695,7 @@ var translations = {
     signup_note:"Dies öffnet eine E-Mail an Florian.Knaeple@gmail.com mit Ihren Angaben — einfach abschicken, den Rest übernehme ich.",
     faq_kicker:"FAQ", faq_h2:"Gute Fragen",
     faq1_q:"Muss ich Ihnen mein Google-Passwort geben?", faq1_a:"Nein. Sie fügen mich als \"Manager\" zu Ihrem Unternehmensprofil hinzu, wodurch ich auf Bewertungen antworten und Basisdaten bearbeiten kann. Ich kann Ihren Eintrag nie löschen, andere Nutzer verwalten oder auf Ihr Google-Konto selbst zugreifen.",
-    faq2_q:"Sind die Antworten KI-geschrieben?", faq2_a:"Immer KI-entworfen. Nie ohne menschliche Prüfung veröffentlicht. Jede einzelne Antwort prüfe ich persönlich, bevor sie unter Ihrem Namen live geht.",
+    faq2_q:"Sind die Antworten KI-geschrieben?", faq2_a:"Jede Antwort beginnt als KI-Entwurf. Danach lese ich sie, ändere, was komisch klingt, und veröffentliche sie erst, wenn sie wirklich nach Ihrem Unternehmen klingt.",
     faq3_q:"Was, wenn ich keinen Manager-Zugriff gewähren möchte?", faq3_a:"Kein Problem. Ich kann Ihnen die entworfenen, geprüften Antworten stattdessen monatlich per E-Mail senden, und Sie fügen sie selbst ein. Etwas mehr Aufwand für Sie, gleiche Qualität.",
     faq4_q:"Sind meine Daten sicher?", faq4_a:"Ich greife nur auf das zu, was für die Beantwortung nötig ist, nicht mehr. Ihre Daten werden nicht verkauft oder weitergegeben.",
     faq5_q:"Kann ich jederzeit kündigen?", faq5_a:"Ja, auch während des Gratismonats. Keine Verträge, keine Bindung.",
@@ -652,11 +703,18 @@ var translations = {
     footer_impressum_label:"Impressum", footer_operated:"ReviewFlow wird betrieben von Florian Knäple", footer_email_label:"E-Mail:",
     footer_privacy_h:"Datenschutz", footer_privacy_p1:"Ich greife nur auf die Bewertungs- und Basisprofildaten zu, die für die Beantwortung in Ihrem Namen über den Google-Manager-Zugriff nötig sind.",
     footer_privacy_p2:"Ihre Daten werden nie verkauft oder an Dritte weitergegeben.", footer_privacy_p3:"Vollständige Datenschutzerklärung auf Anfrage.",
-    footer_bottom_text:"ReviewFlow · Geführt von Florian Knäple"
+    footer_bottom_text:"ReviewFlow · Geführt von Florian Knäple",
+    stat_trust_lead:"Die Zahlen dahinter",
+    stat1_num:"80%", stat1_label:"der Verbraucher nutzen eher ein Unternehmen, das auf jede Bewertung antwortet", stat1_source:"BrightLocal, Local Consumer Review Survey 2026",
+    stat2_num:"50%", stat2_label:"wählen ein Unternehmen nicht, wenn die Antwort generisch wirkt — persönlich schlägt Textbaustein", stat2_source:"BrightLocal, Local Consumer Review Survey 2026",
+    stat3_num:"5–9%", stat3_label:"mehr Umsatz durch nur einen zusätzlichen Stern in der Bewertung, bei unabhängigen Unternehmen", stat3_source:"Harvard Business School, Luca (2016), Yelp.com-Studie",
+    stat_seo_lead:"Das sagen die Daten",
+    stat4_num:"20%", stat4_label:"des lokalen Ranking-Scores hängen laut SEO-Experten von Bewertungssignalen ab — Anzahl, Aktualität und Antworten", stat4_source:"Whitespark, Local Search Ranking Factors 2026",
+    stat5_num:"89%", stat5_label:"der Verbraucher erwarten überhaupt eine Antwort des Inhabers auf ihre Bewertung", stat5_source:"BrightLocal, Local Consumer Review Survey 2026"
   },
   cs: {
     nav_benefits:"Výhody", nav_google:"Google hodnocení", nav_how:"Jak to funguje", nav_pricing:"Ceník", nav_faq:"Časté dotazy", nav_cta:"Vyzkoušet zdarma",
-    hero_eyebrow:"● Návrh pomocí AI, osobně zkontrolováno, nikdy obecné",
+    hero_eyebrow:"● Každou AI odpověď si přečtu, než ji odešlu",
     hero_h1:"Proměňte každou recenzi v důvod vám důvěřovat.",
     hero_sub:"Na každou Google recenzi vaší firmy napíšu konkrétní, promyšlenou odpověď a osobně ji zkontroluji, než se zveřejní. První měsíc máte zdarma.",
     hero_cta1:"Vyzkoušet měsíc zdarma", hero_cta2:"Jak to funguje",
@@ -664,7 +722,7 @@ var translations = {
     hero_mock_review:"\"Potřebovala jsem termín narychlo a stejně mě vzali. Skvělý servis!\"",
     hero_mock_reviewer:"— Jana N.",
     hero_mock_label:"Odpověď majitele",
-    hero_mock_reply:"Moc děkujeme, Jano! Jsme rádi, že jsme mohli pomoct i narychlo — příště zas na viděnou.",
+    hero_mock_reply:"Uf, bylo to na poslední chvíli, ale zvládli jsme to! Moc nás těší, že jsme vás i tak stihli vzít, Jano — příště zas na viděnou.",
     why_kicker:"Proč na tom záleží", why_h2:"Recenze nejsou šum na pozadí. Jsou vaší výlohou.",
     why_p:"Většina lidí si nejdřív přečte recenze, než se dozví cokoliv jiného o vás. To, co tam najdou, tiše rozhodne, jestli se ozvou.",
     why_card1_h:"První dojem vyřešen", why_card1_p:"Kvalitní odpověď je často první skutečná věc, kterou se o vás potenciální zákazník dozví, ještě než spolu promluvíte.",
@@ -679,12 +737,12 @@ var translations = {
     seo_card4_h:"Zapojení", seo_card4_p:"Volání, žádosti o trasu a kliknutí na web z vašeho záznamu signalizují Googlu, že vás lidé považují za hodné akce.",
     seo_callout:"<p><strong>Co skutečně pomáhá:</strong> stálý proud čerstvých recenzí je lepší než hromada starých z minulých let, vyšší průměrné hodnocení zlepšuje míru prokliku a recenze, které přirozeně zmiňují, co děláte, pomáhají Googlu pochopit, čím jste známí. Rychlá odpověď na každou recenzi signalizuje aktivní firmu, buduje důvěru u dalšího čtenáře a obvykle motivuje více lidí, aby recenzi nechali také.</p>",
     how_kicker:"Jak to funguje", how_h2:"Rychlost AI, lidský úsudek, pokaždé",
-    how_p:"Vždy navrženo pomocí AI, nikdy zveřejněno bez kontroly člověkem.",
+    how_p:"AI napíše první návrh. Každou odpověď si přečtu, než jde ven.",
     how_step1_h:"Udělte omezený přístup", how_step1_p:"Přidejte mě jako Správce vašeho Google Firemního profilu na pár kliknutí. Mohu odpovídat na recenze, ale nikdy se nedostanu k vlastnictví záznamu ani účtu.",
     how_step2_h:"AI navrhne, já zkontroluji", how_step2_p:"Ke každé nové recenzi vznikne odpověď podle toho, co zákazník skutečně napsal, a já ji osobně přečtu a upravím, než cokoliv schválím.",
     how_step3_h:"Dostanete výsledek", how_step3_p:"Odpověď se zveřejní a vy dostanete krátký měsíční přehled toho, co zákazníci říkají, abyste měli stále přehled.",
     trust_h:"Nová služba, kterou vede skutečný člověk",
-    trust_p:"Jsem Florian, žiji v Praze. ReviewFlow je mladá služba s osobním přístupem, ne bezduchý SaaS nástroj. Osobně čtu každou recenzi a kontroluji každou odpověď, než se zveřejní pod vaším jménem. Nepředáváte to černé skříňce, ale někomu, komu na vaší pověsti záleží stejně, protože jde i o tu jeho.",
+    trust_p:"Jsem Florian, žiji v Praze. ReviewFlow je mladá služba s osobním přístupem, ne bezduchý SaaS nástroj — a recenze pro mě nejsou nic nového. Jsem Google Local Guide, úroveň 8, s téměř 300 vlastními napsanými recenzemi, takže tohle znám z obou stran: co dělá odpověď opravdovou a co zní jako šablona. Osobně čtu každou recenzi a kontroluji každou odpověď, než se zveřejní pod vaším jménem. Nepředáváte to černé skříňce, ale někomu, komu na vaší pověsti záleží stejně, protože jde i o tu jeho.",
     pricing_kicker:"Ceník", pricing_h2:"Vyzkoušejte zdarma. Pak jednoduché, pevné ceny.", pricing_p:"Žádné poplatky za recenzi, žádné dlouhé smlouvy.",
     pricing_free_banner:"<strong>První měsíc je zcela zdarma.</strong> Plná služba, skutečné recenze, skutečné odpovědi, žádné náklady. Pokračujte pak jen tehdy, pokud se vám to jasně vyplatí.",
     price1_name:"Starter", price1_desc:"Pro menší provozy a obchody", price1_freetag:"1. měsíc zdarma", price1_permonth:"/ měsíc poté", price1_altprice:"nebo 990 Kč / měsíc",
@@ -698,7 +756,7 @@ var translations = {
     signup_note:"Tímto se otevře e-mail na Florian.Knaeple@gmail.com s vašimi údaji — stačí odeslat a ozvu se.",
     faq_kicker:"Časté dotazy", faq_h2:"Dobré otázky",
     faq1_q:"Musím vám dát své heslo do Googlu?", faq1_a:"Ne. Přidáte mě jako „Správce“ svého Firemního profilu, což mi umožní odpovídat na recenze a upravovat základní údaje. Nikdy nemohu smazat váš záznam, spravovat další uživatele ani přistupovat k vašemu Google účtu samotnému.",
-    faq2_q:"Jsou odpovědi psané pomocí AI?", faq2_a:"Vždy navrženy pomocí AI. Nikdy zveřejněny bez kontroly člověkem. Každou jednotlivou odpověď osobně zkontroluji, než se pod vaším jménem zveřejní.",
+    faq2_q:"Jsou odpovědi psané pomocí AI?", faq2_a:"Každá odpověď začíná jako návrh od AI. Pak si ji přečtu, upravím, co zní kostrbatě, a zveřejním ji, až opravdu zní jako vaše firma.",
     faq3_q:"Co když nechci udělit přístup Správce?", faq3_a:"To je v pořádku. Mohu vám místo toho posílat navržené, zkontrolované odpovědi měsíčně e-mailem a vy je vložíte sami. O trochu víc práce na vaší straně, stejná kvalita.",
     faq4_q:"Jsou moje data v bezpečí?", faq4_a:"Přistupuji jen k tomu, co je potřeba pro odpovídání na recenze vaším jménem, nic víc. Vaše data se neprodávají ani nesdílí.",
     faq5_q:"Můžu kdykoliv zrušit?", faq5_a:"Ano, i během měsíce zdarma. Žádné smlouvy, žádný závazek.",
@@ -706,7 +764,14 @@ var translations = {
     footer_impressum_label:"Právní informace", footer_operated:"ReviewFlow provozuje Florian Knäple", footer_email_label:"E-mail:",
     footer_privacy_h:"Ochrana soukromí", footer_privacy_p1:"Přistupuji pouze k datům recenzí a základního profilu potřebným k odpovídání vaším jménem prostřednictvím přístupu Správce Google.",
     footer_privacy_p2:"Vaše data se nikdy neprodávají ani nesdílí s třetími stranami.", footer_privacy_p3:"Kompletní zásady ochrany soukromí na vyžádání.",
-    footer_bottom_text:"ReviewFlow · Provozuje Florian Knäple"
+    footer_bottom_text:"ReviewFlow · Provozuje Florian Knäple",
+    stat_trust_lead:"Čísla, která za tím stojí",
+    stat1_num:"80%", stat1_label:"spotřebitelů uvádí, že spíše využijí firmu, která odpovídá na každou recenzi", stat1_source:"BrightLocal, Local Consumer Review Survey 2026",
+    stat2_num:"50%", stat2_label:"si firmu nevybere, pokud je odpověď obecná a šablonovitá — osobní přístup vyhrává", stat2_source:"BrightLocal, Local Consumer Review Survey 2026",
+    stat3_num:"5–9%", stat3_label:"vyšší tržby jen díky jedné hvězdičce navíc, u nezávislých podniků", stat3_source:"Harvard Business School, Luca (2016), studie o Yelp.com",
+    stat_seo_lead:"Co říkají data",
+    stat4_num:"20%", stat4_label:"místního žebříčku tvoří podle SEO expertů signály z recenzí — počet, aktuálnost a odpovědi", stat4_source:"Whitespark, Local Search Ranking Factors 2026",
+    stat5_num:"89%", stat5_label:"spotřebitelů očekává od majitele alespoň nějakou odpověď na svou recenzi", stat5_source:"BrightLocal, Local Consumer Review Survey 2026"
   }
 };
 
