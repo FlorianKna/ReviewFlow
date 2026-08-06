@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ReviewFlow — Every review, answered right</title>
+<meta name="description" content="I write a specific, thoughtful reply to every Google review your business gets, AI-drafted and personally checked before it goes live. First month free.">
+<meta property="og:title" content="ReviewFlow — Every review, answered right">
+<meta property="og:description" content="I write a specific, thoughtful reply to every Google review your business gets, AI-drafted and personally checked before it goes live. First month free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://floriankna.github.io/ReviewFlow/">
+<meta name="theme-color" content="#0d9488">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%230d9488'/%3E%3C/svg%3E">
 <style>
   :root {
     --ink: #14181f;
@@ -103,6 +110,16 @@
   .mock-reply { background: var(--accent-soft); border-radius: 10px; padding: 14px 16px; }
   .mock-reply-label { font-size: 11.5px; font-weight: 700; color: var(--accent-dark); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.04em; }
   .mock-reply p { font-size: 13.5px; color: var(--ink); }
+  .reviewer-row { display: flex; align-items: center; gap: 10px; }
+  .mini-avatar {
+    width: 30px; height: 30px; border-radius: 50%; color: #fff; font-weight: 700; font-size: 12.5px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .mock-category {
+    display: inline-block; background: var(--accent-soft); color: var(--accent-dark);
+    font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 3px 10px; border-radius: 999px; margin-bottom: 12px;
+  }
   @media (max-width: 480px) { .hero-mock { max-width: 320px; } }
   .examples-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 980px; margin: 0 auto; align-items: start; }
   .examples-grid .mock-card { max-width: none; }
@@ -301,7 +318,10 @@
       <div class="mock-card">
         <div class="mock-stars">★★★★★</div>
         <p class="mock-reviewtext" data-i18n="hero_mock_review">"Booked an appointment last minute and they still managed to fit me in. Great service!"</p>
-        <div class="mock-reviewer" data-i18n="hero_mock_reviewer">— Jana N.</div>
+        <div class="reviewer-row">
+          <div class="mini-avatar" style="background:#0d9488;">J</div>
+          <div class="mock-reviewer" data-i18n="hero_mock_reviewer">Jana N.</div>
+        </div>
         <div class="mock-reply">
           <div class="mock-reply-label" data-i18n="hero_mock_label">Response from the owner</div>
           <p data-i18n="hero_mock_reply">Thank you so much, Jana! We're really glad we could help on short notice — see you next time.</p>
@@ -455,27 +475,39 @@
   </div>
   <div class="examples-grid">
     <div class="mock-card" style="transform:rotate(-1deg);">
+      <div class="mock-category" data-i18n="ex1_category">Restaurant</div>
       <div class="mock-stars">★★★★★</div>
       <p class="mock-reviewtext" data-i18n="ex1_review">"Portions were huge and the staff didn't rush us even though we stayed for hours."</p>
-      <div class="mock-reviewer" data-i18n="ex1_reviewer">— Tomáš R.</div>
+      <div class="reviewer-row">
+        <div class="mini-avatar" style="background:#d97706;">T</div>
+        <div class="mock-reviewer" data-i18n="ex1_reviewer">Tomáš R.</div>
+      </div>
       <div class="mock-reply">
         <div class="mock-reply-label" data-i18n="hero_mock_label">Response from the owner</div>
         <p data-i18n="ex1_reply">Ha, we noticed too — stay as long as you like. Really glad it was a good one, Tomáš. See you next time.</p>
       </div>
     </div>
     <div class="mock-card" style="transform:rotate(0.5deg);">
+      <div class="mock-category" data-i18n="ex2_category">Hair Salon</div>
       <div class="mock-stars">★★★★★</div>
       <p class="mock-reviewtext" data-i18n="ex2_review">"Best haircut I've had in years."</p>
-      <div class="mock-reviewer" data-i18n="ex2_reviewer">— Lucie M.</div>
+      <div class="reviewer-row">
+        <div class="mini-avatar" style="background:#4f6bed;">L</div>
+        <div class="mock-reviewer" data-i18n="ex2_reviewer">Lucie M.</div>
+      </div>
       <div class="mock-reply">
         <div class="mock-reply-label" data-i18n="hero_mock_label">Response from the owner</div>
         <p data-i18n="ex2_reply">That's the best kind of comment to read on a Monday morning. Thank you, Lucie — see you at your next appointment.</p>
       </div>
     </div>
     <div class="mock-card" style="transform:rotate(-0.5deg);">
+      <div class="mock-category" data-i18n="ex3_category">Auto Repair</div>
       <div class="mock-stars">★★★★☆</div>
       <p class="mock-reviewtext" data-i18n="ex3_review">"Fixed the issue fast, though the waiting room could use an update."</p>
-      <div class="mock-reviewer" data-i18n="ex3_reviewer">— Petr K.</div>
+      <div class="reviewer-row">
+        <div class="mini-avatar" style="background:#64748b;">P</div>
+        <div class="mock-reviewer" data-i18n="ex3_reviewer">Petr K.</div>
+      </div>
       <div class="mock-reply">
         <div class="mock-reply-label" data-i18n="hero_mock_label">Response from the owner</div>
         <p data-i18n="ex3_reply">Fair callout on the waiting room, we hear that one a lot and it's on the list. Really glad we got you back on the road quickly, though. Thanks for the honest feedback, Petr.</p>
@@ -638,7 +670,7 @@ var translations = {
     hero_cta1:"Start your free month", hero_cta2:"See how it works",
     hero_note:"No card required  ·  No password sharing  ·  Cancel anytime",
     hero_mock_review:"\"Booked an appointment last minute and they still managed to fit me in. Great service!\"",
-    hero_mock_reviewer:"— Jana N.",
+    hero_mock_reviewer:"Jana N.",
     hero_mock_label:"Response from the owner",
     hero_mock_reply:"Ha, cutting it close, but we made it work! Really glad we could squeeze you in, Jana — see you at the next one.",
     why_kicker:"Why it matters", why_h2:"Reviews aren't background noise. They're your storefront.",
@@ -691,9 +723,9 @@ var translations = {
     stat4_num:"20%", stat4_label:"of a local ranking score comes from review signals — count, recency, and responses — per SEO industry experts", stat4_source:"Whitespark, Local Search Ranking Factors 2026",
     stat5_num:"89%", stat5_label:"of consumers expect an owner to respond to their review at all", stat5_source:"BrightLocal, Local Consumer Review Survey 2026",
     examples_kicker:"See it in action", examples_h2:"A few examples of what actually goes out", examples_p:"Different business, different tone — always specific to what the customer actually said.",
-    ex1_review:"\"Portions were huge and the staff didn't rush us even though we stayed for hours.\"", ex1_reviewer:"— Tomáš R.", ex1_reply:"Ha, we noticed too — stay as long as you like. Really glad it was a good one, Tomáš. See you next time.",
-    ex2_review:"\"Best haircut I've had in years.\"", ex2_reviewer:"— Lucie M.", ex2_reply:"That's the best kind of comment to read on a Monday morning. Thank you, Lucie — see you at your next appointment.",
-    ex3_review:"\"Fixed the issue fast, though the waiting room could use an update.\"", ex3_reviewer:"— Petr K.", ex3_reply:"Fair callout on the waiting room, we hear that one a lot and it's on the list. Really glad we got you back on the road quickly, though. Thanks for the honest feedback, Petr."
+    ex1_category:"Restaurant", ex1_review:"\"Portions were huge and the staff didn't rush us even though we stayed for hours.\"", ex1_reviewer:"Tomáš R.", ex1_reply:"Ha, we noticed too — stay as long as you like. Really glad it was a good one, Tomáš. See you next time.",
+    ex2_category:"Hair Salon", ex2_review:"\"Best haircut I've had in years.\"", ex2_reviewer:"Lucie M.", ex2_reply:"That's the best kind of comment to read on a Monday morning. Thank you, Lucie — see you at your next appointment.",
+    ex3_category:"Auto Repair", ex3_review:"\"Fixed the issue fast, though the waiting room could use an update.\"", ex3_reviewer:"Petr K.", ex3_reply:"Fair callout on the waiting room, we hear that one a lot and it's on the list. Really glad we got you back on the road quickly, though. Thanks for the honest feedback, Petr."
   },
   de: {
     nav_benefits:"Vorteile", nav_google:"Google-Ranking", nav_how:"So funktioniert's", nav_pricing:"Preise", nav_faq:"FAQ", nav_cta:"Gratismonat starten",
@@ -703,7 +735,7 @@ var translations = {
     hero_cta1:"Gratismonat starten", hero_cta2:"So funktioniert's",
     hero_note:"Keine Kreditkarte nötig  ·  Kein Passwort teilen  ·  Jederzeit kündbar",
     hero_mock_review:"\"Kurzfristig einen Termin gebraucht und trotzdem noch reinbekommen. Toller Service!\"",
-    hero_mock_reviewer:"— Jana N.",
+    hero_mock_reviewer:"Jana N.",
     hero_mock_label:"Antwort des Inhabers",
     hero_mock_reply:"Puh, das war knapp, aber wir haben es hinbekommen! Freut uns wirklich, dass es kurzfristig geklappt hat, Jana — bis zum nächsten Mal.",
     why_kicker:"Warum es wichtig ist", why_h2:"Bewertungen sind kein Hintergrundrauschen. Sie sind Ihr Schaufenster.",
@@ -756,9 +788,9 @@ var translations = {
     stat4_num:"20%", stat4_label:"des lokalen Ranking-Scores hängen laut SEO-Experten von Bewertungssignalen ab — Anzahl, Aktualität und Antworten", stat4_source:"Whitespark, Local Search Ranking Factors 2026",
     stat5_num:"89%", stat5_label:"der Verbraucher erwarten überhaupt eine Antwort des Inhabers auf ihre Bewertung", stat5_source:"BrightLocal, Local Consumer Review Survey 2026",
     examples_kicker:"So sieht das in echt aus", examples_h2:"Ein paar Beispiele, wie eine Antwort wirklich aussieht", examples_p:"Je nach Unternehmen ein anderer Ton — aber immer konkret auf das bezogen, was der Kunde tatsächlich geschrieben hat.",
-    ex1_review:"\"Die Portionen waren riesig, und das Personal hat uns nicht gedrängt, obwohl wir stundenlang geblieben sind.\"", ex1_reviewer:"— Tomáš R.", ex1_reply:"Ha, das ist uns auch aufgefallen — bleiben Sie ruhig so lange Sie wollen. Freut uns wirklich, dass es ein schöner Abend war, Tomáš. Bis zum nächsten Mal.",
-    ex2_review:"\"Bester Haarschnitt seit Jahren.\"", ex2_reviewer:"— Lucie M.", ex2_reply:"Genau so ein Kommentar macht den Montagmorgen. Danke, Lucie — bis zum nächsten Termin.",
-    ex3_review:"\"Das Problem wurde schnell behoben, der Wartebereich könnte aber eine Auffrischung vertragen.\"", ex3_reviewer:"— Petr K.", ex3_reply:"Fairer Punkt zum Wartebereich, das hören wir öfter und steht auf der Liste. Freut uns aber wirklich, dass Sie schnell wieder unterwegs waren. Danke für das ehrliche Feedback, Petr."
+    ex1_category:"Restaurant", ex1_review:"\"Die Portionen waren riesig, und das Personal hat uns nicht gedrängt, obwohl wir stundenlang geblieben sind.\"", ex1_reviewer:"Tomáš R.", ex1_reply:"Ha, das ist uns auch aufgefallen — bleiben Sie ruhig so lange Sie wollen. Freut uns wirklich, dass es ein schöner Abend war, Tomáš. Bis zum nächsten Mal.",
+    ex2_category:"Friseursalon", ex2_review:"\"Bester Haarschnitt seit Jahren.\"", ex2_reviewer:"Lucie M.", ex2_reply:"Genau so ein Kommentar macht den Montagmorgen. Danke, Lucie — bis zum nächsten Termin.",
+    ex3_category:"Autowerkstatt", ex3_review:"\"Das Problem wurde schnell behoben, der Wartebereich könnte aber eine Auffrischung vertragen.\"", ex3_reviewer:"Petr K.", ex3_reply:"Fairer Punkt zum Wartebereich, das hören wir öfter und steht auf der Liste. Freut uns aber wirklich, dass Sie schnell wieder unterwegs waren. Danke für das ehrliche Feedback, Petr."
   },
   cs: {
     nav_benefits:"Výhody", nav_google:"Google hodnocení", nav_how:"Jak to funguje", nav_pricing:"Ceník", nav_faq:"Časté dotazy", nav_cta:"Vyzkoušet zdarma",
@@ -768,7 +800,7 @@ var translations = {
     hero_cta1:"Vyzkoušet měsíc zdarma", hero_cta2:"Jak to funguje",
     hero_note:"Bez karty  ·  Bez sdílení hesla  ·  Zrušení kdykoliv",
     hero_mock_review:"\"Potřebovala jsem termín narychlo a stejně mě vzali. Skvělý servis!\"",
-    hero_mock_reviewer:"— Jana N.",
+    hero_mock_reviewer:"Jana N.",
     hero_mock_label:"Odpověď majitele",
     hero_mock_reply:"Uf, bylo to na poslední chvíli, ale zvládli jsme to! Moc nás těší, že jsme vás i tak stihli vzít, Jano — příště zas na viděnou.",
     why_kicker:"Proč na tom záleží", why_h2:"Recenze nejsou šum na pozadí. Jsou vaší výlohou.",
@@ -821,9 +853,9 @@ var translations = {
     stat4_num:"20%", stat4_label:"místního žebříčku tvoří podle SEO expertů signály z recenzí — počet, aktuálnost a odpovědi", stat4_source:"Whitespark, Local Search Ranking Factors 2026",
     stat5_num:"89%", stat5_label:"spotřebitelů očekává od majitele alespoň nějakou odpověď na svou recenzi", stat5_source:"BrightLocal, Local Consumer Review Survey 2026",
     examples_kicker:"Jak to vypadá v praxi", examples_h2:"Pár příkladů, jak taková odpověď doopravdy vypadá", examples_p:"Podle firmy jiný tón — ale vždy konkrétně navázaný na to, co zákazník skutečně napsal.",
-    ex1_review:"\"Porce byly obrovské a personál nás nehonil, i když jsme tam zůstali několik hodin.\"", ex1_reviewer:"— Tomáš R.", ex1_reply:"Ha, taky jsme si všimli — klidně zůstaňte, jak dlouho chcete. Moc nás těší, že to byl pěkný večer, Tomáši. Zas příště.",
-    ex2_review:"\"Nejlepší střih za poslední roky.\"", ex2_reviewer:"— Lucie M.", ex2_reply:"Přesně tohle chce člověk číst v pondělí ráno. Díky, Lucie — zas na dalším termínu.",
-    ex3_review:"\"Problém opravili rychle, čekárna by ale zasloužila osvěžit.\"", ex3_reviewer:"— Petr K.", ex3_reply:"Férová poznámka k čekárně, slyšíme to častěji a máme to v plánu. Ale moc nás těší, že jste byl zpátky na cestě rychle. Díky za upřímnou zpětnou vazbu, Petře."
+    ex1_category:"Restaurace", ex1_review:"\"Porce byly obrovské a personál nás nehonil, i když jsme tam zůstali několik hodin.\"", ex1_reviewer:"Tomáš R.", ex1_reply:"Ha, taky jsme si všimli — klidně zůstaňte, jak dlouho chcete. Moc nás těší, že to byl pěkný večer, Tomáši. Zas příště.",
+    ex2_category:"Kadeřnictví", ex2_review:"\"Nejlepší střih za poslední roky.\"", ex2_reviewer:"Lucie M.", ex2_reply:"Přesně tohle chce člověk číst v pondělí ráno. Díky, Lucie — zas na dalším termínu.",
+    ex3_category:"Autoservis", ex3_review:"\"Problém opravili rychle, čekárna by ale zasloužila osvěžit.\"", ex3_reviewer:"Petr K.", ex3_reply:"Férová poznámka k čekárně, slyšíme to častěji a máme to v plánu. Ale moc nás těší, že jste byl zpátky na cestě rychle. Díky za upřímnou zpětnou vazbu, Petře."
   }
 };
 
