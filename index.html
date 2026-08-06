@@ -189,6 +189,12 @@
     font-size: 12.5px; color: var(--faint); text-align: center;
 }
   @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  /* SEO SECTION */
+  .seo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto 32px; }
+  @media (max-width: 720px) { .seo-grid { grid-template-columns: 1fr; } }
+  .seo-callout { max-width: 780px; margin: 0 auto; background: var(--accent-soft); border: 1px solid #b8ebe3; border-radius: 14px; padding: 26px 30px; font-size: 14.5px; color: var(--ink); }
+  .seo-callout strong { color: var(--accent-dark); }
 </style>
   </head>
   <body>
@@ -248,6 +254,34 @@
       </div>
     </div>
   </section>
+
+<section id="seo">
+  <div class="section-head">
+    <div class="kicker">Why it matters for Google</div>
+    <h2>Reviews aren't just trust signals. They're ranking signals.</h2>
+    <p>Local search results run on three things: relevance, distance, and prominence. Reviews feed directly into the third one, and replies feed the trust that turns a search into a call.</p>
+  </div>
+  <div class="seo-grid">
+    <div class="why-card">
+      <div class="icon">1</div>
+      <h3>Relevance</h3>
+      <p>How closely your profile matches what someone actually searched for.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">2</div>
+      <h3>Distance</h3>
+      <p>How close your business is to the person doing the searching.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">3</div>
+      <h3>Prominence</h3>
+      <p>How well-known and trusted Google judges your business to be, built largely through reviews.</p>
+    </div>
+  </div>
+  <div class="seo-callout">
+    <p><strong>What actually moves it:</strong> a steady stream of recent reviews beats a pile of old ones from years back, higher average ratings improve click-through, and reviews that naturally mention what you do help Google understand what you're known for. Replying to every review, quickly, signals an active business, builds trust with the next customer reading it, and tends to encourage more people to leave one in the first place.</p>
+  </div>
+</section>
 
   <section id="how" class="how-section">
     <div class="section-head">
