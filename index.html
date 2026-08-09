@@ -279,6 +279,25 @@
   .carousel-arrow:hover { box-shadow: 0 6px 16px rgba(20,24,31,0.14); transform: translateY(-50%) scale(1.06); }
   .trust-wrap { transition: box-shadow .2s ease; }
   .trust-wrap:hover { box-shadow: 0 14px 30px rgba(20,24,31,0.07); }
+  .maps-mock-wrap { max-width: 640px; margin: 0 auto; }
+  .maps-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 26px 28px; box-shadow: 0 20px 40px rgba(20,24,31,0.08); }
+  .maps-card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .maps-pin { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .maps-business { font-weight: 700; font-size: 15.5px; }
+  .maps-rating { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .maps-divider { height: 1px; background: var(--border); margin-bottom: 18px; }
+  .maps-review-row { display: flex; gap: 12px; align-items: flex-start; }
+  .maps-review-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+  .maps-reviewer { font-weight: 600; font-size: 13.5px; }
+  .maps-stars-sm { color: #f5a623; font-size: 12px; letter-spacing: 1px; }
+  .maps-date { font-size: 11.5px; color: var(--faint); }
+  .maps-review-text { font-size: 13.8px; color: var(--ink); margin-bottom: 14px; }
+  .maps-reply-box { background: var(--bg-alt); border-left: 3px solid var(--accent); border-radius: 8px; padding: 12px 16px; }
+  .maps-reply-top { display: flex; justify-content: space-between; gap: 10px; font-size: 11px; font-weight: 700; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 5px; }
+  .maps-reply-box p { font-size: 13.5px; color: var(--ink); }
+  @media (max-width: 560px) { .maps-card { padding: 20px; } }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -331,8 +350,51 @@
   </div>
 </section>
 
+<section id="maps-preview">
+  <div class="section-head reveal">
+    <div class="kicker" data-i18n="maps_kicker">See exactly where it shows up</div>
+    <h2 data-i18n="maps_h2">Not just a reply. What your next customer actually sees.</h2>
+    <p data-i18n="maps_p">This is roughly how it looks on your Google Business Profile — the first thing most people check before they call.</p>
+  </div>
+  <div class="maps-mock-wrap reveal">
+    <div class="maps-card">
+      <div class="maps-card-header">
+        <div class="maps-pin">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22s7-7.58 7-13A7 7 0 0 0 5 9c0 5.42 7 13 7 13z" fill="#0d9488"/>
+            <circle cx="12" cy="9" r="2.5" fill="#fff"/>
+          </svg>
+        </div>
+        <div>
+          <div class="maps-business" data-i18n="maps_business">Bella Vista Bistro</div>
+          <div class="maps-rating" data-i18n="maps_rating">4.8 ★ · 127 reviews</div>
+        </div>
+      </div>
+      <div class="maps-divider"></div>
+      <div class="maps-review-row">
+        <div class="mini-avatar" style="background:#0d9488;">M</div>
+        <div class="maps-review-body">
+          <div class="maps-review-top">
+            <span class="maps-reviewer" data-i18n="maps_reviewer">Markéta S.</span>
+            <span class="maps-stars-sm">★★★★★</span>
+            <span class="maps-date" data-i18n="maps_reviewdate">2 days ago</span>
+          </div>
+          <p class="maps-review-text" data-i18n="maps_review">"Asked for a table last minute on a Friday night and they still found us a spot. Food was great too."</p>
+          <div class="maps-reply-box">
+            <div class="maps-reply-top">
+              <span data-i18n="maps_replylabel">Response from the owner</span>
+              <span class="maps-date" data-i18n="maps_replydate">1 day ago</span>
+            </div>
+            <p data-i18n="maps_reply">Friday nights get busy fast, so genuinely glad we could fit you in. Hope the rest of the evening was just as good, Markéta!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="why">
-  <div class="section-head">
+  <div class="section-head reveal">
     <div class="kicker" data-i18n="why_kicker">Why it matters</div>
     <h2 data-i18n="why_h2">Reviews aren't background noise. They're your storefront.</h2>
     <p data-i18n="why_p">Most people read reviews before they read anything else about you. What they find next quietly decides whether they reach out.</p>
@@ -393,7 +455,7 @@
       <circle cx="60" cy="56" r="6" fill="#ffffff"/>
     </svg>
   </div>
-  <div class="section-head">
+  <div class="section-head reveal">
     <div class="kicker" data-i18n="seo_kicker">Why it matters for Google</div>
     <h2 data-i18n="seo_h2">Reviews aren't just trust signals. They're ranking signals.</h2>
     <p data-i18n="seo_p">Local search results run on three official signals: relevance, distance, and prominence — plus a fourth Google doesn't spell out: engagement.</p>
@@ -443,7 +505,7 @@
 </section>
 
 <section id="how" class="how-section">
-  <div class="section-head">
+  <div class="section-head reveal">
     <div class="kicker" data-i18n="how_kicker">How it works</div>
     <h2 data-i18n="how_h2">AI speed, human judgment, every single time</h2>
     <p data-i18n="how_p">Fully AI-drafted, never AI-published without a human reading it first.</p>
@@ -468,7 +530,7 @@
 </section>
 
 <section id="examples">
-  <div class="section-head">
+  <div class="section-head reveal">
     <div class="kicker" data-i18n="examples_kicker">See it in action</div>
     <h2 data-i18n="examples_h2">A few examples of what actually goes out</h2>
     <p data-i18n="examples_p">Different business, different tone — always specific to what the customer actually said.</p>
@@ -527,7 +589,7 @@
 </section>
 
 <section id="pricing">
-  <div class="section-head">
+  <div class="section-head reveal">
     <div class="kicker" data-i18n="pricing_kicker">Pricing</div>
     <h2 data-i18n="pricing_h2">Try it for free. Then it's simple, flat pricing.</h2>
     <p data-i18n="pricing_p">No per-review fees, no long contracts.</p>
@@ -571,7 +633,7 @@
 </section>
 
 <section id="signup" class="signup-section">
-  <div class="section-head">
+  <div class="section-head reveal">
     <div class="kicker" data-i18n="signup_kicker">Get started</div>
     <h2 data-i18n="signup_h2">Claim your free month</h2>
     <p data-i18n="signup_p">Tell me a bit about your business and I'll reach out within a day.</p>
@@ -602,11 +664,10 @@
       <button type="submit" class="btn-primary" style="width:100%;" data-i18n="signup_submit">Send my details</button>
     </div>
   </form>
-  <p class="signup-note" data-i18n="signup_note">This opens an email to Florian.Knaeple@gmail.com with your details — hit send and I'll take it from there.</p>
 </section>
 
 <section id="faq" style="background: var(--bg-alt);">
-  <div class="section-head">
+  <div class="section-head reveal">
     <div class="kicker" data-i18n="faq_kicker">FAQ</div>
     <h2 data-i18n="faq_h2">Good questions</h2>
   </div>
@@ -664,6 +725,11 @@
 var translations = {
   en: {
     nav_benefits:"Benefits", nav_google:"Google ranking", nav_how:"How it works", nav_pricing:"Pricing", nav_faq:"FAQ", nav_cta:"Start free month",
+    maps_kicker:"See exactly where it shows up", maps_h2:"Not just a reply. What your next customer actually sees.", maps_p:"This is roughly how it looks on your Google Business Profile — the first thing most people check before they call.",
+    maps_business:"Bella Vista Bistro", maps_rating:"4.8 ★ · 127 reviews", maps_reviewer:"Markéta S.", maps_reviewdate:"2 days ago",
+    maps_review:"\"Asked for a table last minute on a Friday night and they still found us a spot. Food was great too.\"",
+    maps_replylabel:"Response from the owner", maps_replydate:"1 day ago",
+    maps_reply:"Friday nights get busy fast, so genuinely glad we could fit you in. Hope the rest of the evening was just as good, Markéta!",
     hero_eyebrow:"● I read every AI-drafted reply before it goes out",
     hero_h1:"Turn every review into a reason to trust you.",
     hero_sub:"I write a specific, thoughtful reply to every Google review your business gets and personally check each one before it goes live. Your first month is free.",
@@ -703,7 +769,6 @@ var translations = {
     signup_kicker:"Get started", signup_h2:"Claim your free month", signup_p:"Tell me a bit about your business and I'll reach out within a day.",
     signup_firstname:"First name", signup_lastname:"Last name", signup_email:"Email", signup_plan:"Interested in",
     signup_plan_starter:"Starter", signup_plan_growth:"Growth", signup_submit:"Send my details",
-    signup_note:"This opens an email to Florian.Knaeple@gmail.com with your details — hit send and I'll take it from there.",
     faq_kicker:"FAQ", faq_h2:"Good questions",
     faq1_q:"Do I need to give you my Google password?", faq1_a:"No. You add me as a \"Manager\" on your Business Profile, which lets me reply to reviews and edit basic info. I can never remove your listing, manage other users, or access your Google account itself.",
     faq2_q:"Are the replies AI-written?", faq2_a:"Every reply starts as an AI draft, then I read it, fix anything that sounds off, and only post it once it actually sounds like your business.",
@@ -729,6 +794,11 @@ var translations = {
   },
   de: {
     nav_benefits:"Vorteile", nav_google:"Google-Ranking", nav_how:"So funktioniert's", nav_pricing:"Preise", nav_faq:"FAQ", nav_cta:"Gratismonat starten",
+    maps_kicker:"Genau dort, wo es zählt", maps_h2:"Nicht nur eine Antwort. Das, was Ihr nächster Kunde wirklich sieht.", maps_p:"So ungefähr sieht es auf Ihrem Google-Unternehmensprofil aus — dem ersten, was die meisten Leute prüfen, bevor sie anrufen.",
+    maps_business:"Bella Vista Bistro", maps_rating:"4,8 ★ · 127 Bewertungen", maps_reviewer:"Markéta S.", maps_reviewdate:"vor 2 Tagen",
+    maps_review:"\"Freitagabend spontan nach einem Tisch gefragt, und sie haben trotzdem einen Platz gefunden. Essen war auch super.\"",
+    maps_replylabel:"Antwort des Inhabers", maps_replydate:"vor 1 Tag",
+    maps_reply:"Freitagabende sind bei uns schnell voll, umso schöner, dass es geklappt hat. Hoffe, der Rest des Abends war genauso gut, Markéta!",
     hero_eyebrow:"● Ich lese jede KI-Antwort, bevor sie rausgeht",
     hero_h1:"Machen Sie aus jeder Bewertung einen Vertrauensbeweis.",
     hero_sub:"Ich schreibe eine konkrete, durchdachte Antwort auf jede Google-Bewertung Ihres Unternehmens und prüfe sie persönlich, bevor sie veröffentlicht wird. Der erste Monat ist kostenlos.",
@@ -768,7 +838,6 @@ var translations = {
     signup_kicker:"Loslegen", signup_h2:"Sichern Sie sich Ihren Gratismonat", signup_p:"Erzählen Sie mir kurz von Ihrem Unternehmen, ich melde mich innerhalb eines Tages.",
     signup_firstname:"Vorname", signup_lastname:"Nachname", signup_email:"E-Mail", signup_plan:"Interessiert an",
     signup_plan_starter:"Starter", signup_plan_growth:"Growth", signup_submit:"Angaben senden",
-    signup_note:"Dies öffnet eine E-Mail an Florian.Knaeple@gmail.com mit Ihren Angaben — einfach abschicken, den Rest übernehme ich.",
     faq_kicker:"FAQ", faq_h2:"Gute Fragen",
     faq1_q:"Muss ich Ihnen mein Google-Passwort geben?", faq1_a:"Nein. Sie fügen mich als \"Manager\" zu Ihrem Unternehmensprofil hinzu, wodurch ich auf Bewertungen antworten und Basisdaten bearbeiten kann. Ich kann Ihren Eintrag nie löschen, andere Nutzer verwalten oder auf Ihr Google-Konto selbst zugreifen.",
     faq2_q:"Sind die Antworten KI-geschrieben?", faq2_a:"Jede Antwort beginnt als KI-Entwurf. Danach lese ich sie, ändere, was komisch klingt, und veröffentliche sie erst, wenn sie wirklich nach Ihrem Unternehmen klingt.",
@@ -794,6 +863,11 @@ var translations = {
   },
   cs: {
     nav_benefits:"Výhody", nav_google:"Google hodnocení", nav_how:"Jak to funguje", nav_pricing:"Ceník", nav_faq:"Časté dotazy", nav_cta:"Vyzkoušet zdarma",
+    maps_kicker:"Přesně tam, kde na tom záleží", maps_h2:"Není to jen odpověď. Je to to, co doopravdy uvidí váš další zákazník.", maps_p:"Přibližně takhle to vypadá na vašem Google Firemním profilu — první věc, kterou si většina lidí zkontroluje, než zavolá.",
+    maps_business:"Bella Vista Bistro", maps_rating:"4,8 ★ · 127 recenzí", maps_reviewer:"Markéta S.", maps_reviewdate:"před 2 dny",
+    maps_review:"\"V pátek večer jsem narychlo poprosila o stůl a stejně se pro nás místo našlo. Jídlo bylo taky skvělé.\"",
+    maps_replylabel:"Odpověď majitele", maps_replydate:"před 1 dnem",
+    maps_reply:"Páteční večery máme rychle plné, o to větší radost, že to vyšlo. Doufám, že zbytek večera byl stejně fajn, Markéto!",
     hero_eyebrow:"● Každou AI odpověď si přečtu, než ji odešlu",
     hero_h1:"Proměňte každou recenzi v důvod vám důvěřovat.",
     hero_sub:"Na každou Google recenzi vaší firmy napíšu konkrétní, promyšlenou odpověď a osobně ji zkontroluji, než se zveřejní. První měsíc máte zdarma.",
@@ -833,7 +907,6 @@ var translations = {
     signup_kicker:"Začínáme", signup_h2:"Získejte svůj měsíc zdarma", signup_p:"Napište mi krátce o vaší firmě, ozvu se do jednoho dne.",
     signup_firstname:"Jméno", signup_lastname:"Příjmení", signup_email:"E-mail", signup_plan:"Mám zájem o",
     signup_plan_starter:"Starter", signup_plan_growth:"Growth", signup_submit:"Odeslat údaje",
-    signup_note:"Tímto se otevře e-mail na Florian.Knaeple@gmail.com s vašimi údaji — stačí odeslat a ozvu se.",
     faq_kicker:"Časté dotazy", faq_h2:"Dobré otázky",
     faq1_q:"Musím vám dát své heslo do Googlu?", faq1_a:"Ne. Přidáte mě jako „Správce“ svého Firemního profilu, což mi umožní odpovídat na recenze a upravovat základní údaje. Nikdy nemohu smazat váš záznam, spravovat další uživatele ani přistupovat k vašemu Google účtu samotnému.",
     faq2_q:"Jsou odpovědi psané pomocí AI?", faq2_a:"Každá odpověď začíná jako návrh od AI. Pak si ji přečtu, upravím, co zní kostrbatě, a zveřejním ji, až opravdu zní jako vaše firma.",
@@ -908,6 +981,23 @@ function goToSignup(plan) {
   var target = document.getElementById('signup');
   if (target) target.scrollIntoView({ behavior: 'smooth' });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function(el) { el.classList.add('is-visible'); });
+  }
+});
 
 function submitSignup(e) {
   e.preventDefault();
