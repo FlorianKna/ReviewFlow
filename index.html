@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ReviewFlow — Every review, answered right</title>
-<meta name="description" content="I write a specific, thoughtful reply to every Google review your business gets, AI-drafted and personally checked before it goes live. First month free.">
-<meta property="og:title" content="ReviewFlow — Every review, answered right">
-<meta property="og:description" content="I write a specific, thoughtful reply to every Google review your business gets, AI-drafted and personally checked before it goes live. First month free.">
+<title>Florian Replies — Every review, answered right</title>
+<meta name="description" content="I personally write and check a specific, thoughtful reply to every Google review your business gets before it goes live. First month free.">
+<meta property="og:title" content="Florian Replies — Every review, answered right">
+<meta property="og:description" content="I personally write and check a specific, thoughtful reply to every Google review your business gets before it goes live. First month free.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://floriankna.github.io/ReviewFlow/">
+<meta property="og:url" content="https://floriankna.github.io/FlorianReplies/">
 <meta name="theme-color" content="#0d9488">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%230d9488'/%3E%3C/svg%3E">
 <style>
@@ -97,6 +97,7 @@
     cursor: pointer; font-family: inherit;
   }
   .hero-note { margin-top: 20px; font-size: 13.5px; color: var(--faint); }
+  .hero-diff { margin-top: 24px; font-size: 14.5px; font-weight: 600; color: var(--accent-dark); }
   .hero-mock { max-width: 400px; margin: 48px auto 0; }
   .mock-card {
     background: #fff; border: 1px solid var(--border); border-radius: 14px;
@@ -121,6 +122,18 @@
     padding: 3px 10px; border-radius: 999px; margin-bottom: 12px;
   }
   @media (max-width: 480px) { .hero-mock { max-width: 320px; } }
+  @media (max-width: 640px) {
+    h1 { font-size: 32px; }
+    .hero { padding: 84px 20px 56px; }
+    .hero p.sub { font-size: 16px; }
+    .section-head h2 { font-size: 24px; }
+    .cta-band h2 { font-size: 24px; }
+    nav { padding: 14px 16px; gap: 10px; }
+    .logo { font-size: 15px; }
+    .nav-cta { padding: 8px 12px; font-size: 12.5px; }
+    .lang-switch { gap: 2px; }
+    .lang-switch button { padding: 4px 5px; font-size: 11.5px; }
+  }
   .examples-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 980px; margin: 0 auto; align-items: start; }
   .examples-grid .mock-card { max-width: none; }
   @media (max-width: 900px) { .examples-grid { grid-template-columns: 1fr; max-width: 420px; } }
@@ -304,7 +317,7 @@
 
 <header>
   <nav>
-    <div class="logo"><span class="dot"></span>ReviewFlow</div>
+    <div class="logo"><span class="dot"></span>Florian Replies</div>
     <div class="nav-links">
       <a href="#why" data-i18n="nav_benefits">Benefits</a>
       <a href="#seo" data-i18n="nav_google">Google ranking</a>
@@ -325,13 +338,14 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <span class="eyebrow" data-i18n="hero_eyebrow">● AI-drafted, personally reviewed, never generic</span>
+    <span class="eyebrow" data-i18n="hero_eyebrow">● Every reply, read and personally checked before it's posted</span>
     <h1 data-i18n="hero_h1">Turn every review into a reason to trust you.</h1>
     <p class="sub" data-i18n="hero_sub">I write a specific, thoughtful reply to every Google review your business gets and personally check each one before it goes live. Your first month is free.</p>
     <div class="hero-ctas">
       <button class="btn-primary" data-i18n="hero_cta1" onclick="goToSignup()">Start your free month</button>
       <a class="btn-secondary" href="#how" data-i18n="hero_cta2">See how it works</a>
     </div>
+    <div class="hero-diff" data-i18n="hero_diff">Not another dashboard to set up — I personally do the work for you.</div>
     <div class="hero-note" data-i18n="hero_note">No card required &nbsp;·&nbsp; No password sharing &nbsp;·&nbsp; Cancel anytime</div>
     <div class="hero-mock">
       <div class="mock-card">
@@ -507,8 +521,8 @@
 <section id="how" class="how-section">
   <div class="section-head reveal">
     <div class="kicker" data-i18n="how_kicker">How it works</div>
-    <h2 data-i18n="how_h2">AI speed, human judgment, every single time</h2>
-    <p data-i18n="how_p">Fully AI-drafted, never AI-published without a human reading it first.</p>
+    <h2 data-i18n="how_h2">Fast to draft, careful before it posts</h2>
+    <p data-i18n="how_p">Every reply is personally read and checked by me before it ever goes live.</p>
   </div>
   <div class="steps">
     <div class="step">
@@ -518,7 +532,7 @@
     </div>
     <div class="step">
       <div class="num">2</div>
-      <h3 data-i18n="how_step2_h">AI drafts, I check</h3>
+      <h3 data-i18n="how_step2_h">I write it, I check it</h3>
       <p data-i18n="how_step2_p">Every new review gets a reply drafted around what that customer actually said, then I personally read and adjust it before anything is approved.</p>
     </div>
     <div class="step">
@@ -583,7 +597,7 @@
     <div class="trust-avatar">FK</div>
     <div>
       <h3 data-i18n="trust_h">A new service, run by an actual person</h3>
-      <p data-i18n="trust_p">I'm Florian, based in Prague. ReviewFlow is a young, hands-on service, not a faceless SaaS tool. I personally read every review and check every reply that goes out under your name before it's ever posted. You're not handing this off to a black box, you're getting someone who treats your reputation like it matters, because it's also mine on the line.</p>
+      <p data-i18n="trust_p">I'm Florian, based in Prague. Florian Replies is a young, hands-on service, not a faceless SaaS tool. I personally read every review and check every reply that goes out under your name before it's ever posted. You're not handing this off to a black box, you're getting someone who treats your reputation like it matters, because it's also mine on the line.</p>
     </div>
   </div>
 </section>
@@ -677,8 +691,8 @@
       <p data-i18n="faq1_a">No. You add me as a "Manager" on your Business Profile, which lets me reply to reviews and edit basic info. I can never remove your listing, manage other users, or access your Google account itself.</p>
     </div>
     <div class="faq-item">
-      <h3 data-i18n="faq2_q">Are the replies AI-written?</h3>
-      <p data-i18n="faq2_a">Drafted with AI, always. Posted without a human reading it first, never. Every single reply is checked by me before it goes live under your name.</p>
+      <h3 data-i18n="faq2_q">Will the replies actually sound like my business?</h3>
+      <p data-i18n="faq2_a">Every reply is written to match your tone and the specific situation, then read and checked by me personally before it ever goes live under your name. Nothing generic goes out.</p>
     </div>
     <div class="faq-item">
       <h3 data-i18n="faq3_q">What if I don't want to grant Manager access?</h3>
@@ -706,7 +720,7 @@
     <div>
       <details>
         <summary data-i18n="footer_impressum_label">Impressum</summary>
-        <p data-i18n="footer_operated">ReviewFlow is operated by Florian Knäple</p>
+        <p data-i18n="footer_operated">Florian Replies is operated by Florian Knäple</p>
         <p>V Cibulkách 366/57, 150 00 Praha 5-Košíře, Czechia</p>
         <p><span data-i18n="footer_email_label">Email:</span> Florian.Knaeple@gmail.com</p>
       </details>
@@ -718,7 +732,7 @@
       <p data-i18n="footer_privacy_p3">Full privacy policy available on request.</p>
     </div>
   </div>
-  <div class="footer-bottom"><span data-i18n="footer_bottom_text">ReviewFlow &middot; Run by Florian Knäple</span> &middot; <a href="mailto:Florian.Knaeple@gmail.com">Florian.Knaeple@gmail.com</a></div>
+  <div class="footer-bottom"><span data-i18n="footer_bottom_text">Florian Replies &middot; Run by Florian Knäple</span> &middot; <a href="mailto:Florian.Knaeple@gmail.com">Florian.Knaeple@gmail.com</a></div>
 </footer>
 
 <script>
@@ -730,11 +744,12 @@ var translations = {
     maps_review:"\"Asked for a table last minute on a Friday night and they still found us a spot. Food was great too.\"",
     maps_replylabel:"Response from the owner", maps_replydate:"1 day ago",
     maps_reply:"Friday nights get busy fast, so genuinely glad we could fit you in. Hope the rest of the evening was just as good, Markéta!",
-    hero_eyebrow:"● I read every AI-drafted reply before it goes out",
+    hero_eyebrow:"● Every reply, read and personally checked before it's posted",
     hero_h1:"Turn every review into a reason to trust you.",
     hero_sub:"I write a specific, thoughtful reply to every Google review your business gets and personally check each one before it goes live. Your first month is free.",
     hero_cta1:"Start your free month", hero_cta2:"See how it works",
     hero_note:"No card required  ·  No password sharing  ·  Cancel anytime",
+    hero_diff:"Not another dashboard to set up — I personally do the work for you.",
     hero_mock_review:"\"Booked an appointment last minute and they still managed to fit me in. Great service!\"",
     hero_mock_reviewer:"Jana N.",
     hero_mock_label:"Response from the owner",
@@ -752,13 +767,13 @@ var translations = {
     seo_card3_h:"Prominence", seo_card3_p:"How well-known and trusted Google judges your business to be, built largely through reviews.",
     seo_card4_h:"Engagement", seo_card4_p:"Calls, direction requests, and website clicks from your listing signal to Google that people find you worth acting on.",
     seo_callout:"<p><strong>What actually moves it:</strong> a steady stream of recent reviews beats a pile of old ones from years back, higher average ratings improve click-through, and reviews that naturally mention what you do help Google understand what you're known for. Replying to every review, quickly, signals an active business, builds trust with the next customer reading it, and tends to encourage more people to leave one in the first place.</p>",
-    how_kicker:"How it works", how_h2:"AI speed, human judgment, every single time",
-    how_p:"AI writes the first draft. I read every single one before it goes live.",
+    how_kicker:"How it works", how_h2:"Fast to draft, careful before it posts",
+    how_p:"Every reply is personally read and checked by me before it ever goes live.",
     how_step1_h:"Grant limited access", how_step1_p:"Add me as a Manager on your Google Business Profile in a couple of clicks. I can reply to reviews, but never touch your listing ownership or account.",
-    how_step2_h:"AI drafts, I check", how_step2_p:"Every new review gets a reply drafted around what that customer actually said, then I personally read and adjust it before anything is approved.",
+    how_step2_h:"I write it, I check it", how_step2_p:"Every new review gets a reply drafted around what that customer actually said, then I personally read and adjust it before anything is approved.",
     how_step3_h:"You get the result", how_step3_p:"The reply goes live and you receive a short monthly recap of what customers are saying, so you're never out of the loop.",
     trust_h:"A new service, run by an actual person",
-    trust_p:"I'm Florian, based in Prague. ReviewFlow is a young, hands-on service, not a faceless SaaS tool — and reviews aren't new to me. I'm a Google Local Guide, Level 8, with close to 300 reviews written myself, so I've seen this from both sides: what makes a reply feel real, and what makes it feel like a form letter. I personally read every review and check every reply that goes out under your name before it's ever posted. You're not handing this off to a black box, you're getting someone who treats your reputation like it matters, because mine is on the line too.",
+    trust_p:"I'm Florian, based in Prague. Florian Replies is a young, hands-on service, not a faceless SaaS tool — and reviews aren't new to me. I'm a Google Local Guide, Level 8, with close to 300 reviews written myself, so I've seen this from both sides: what makes a reply feel real, and what makes it feel like a form letter. I personally read every review and check every reply that goes out under your name before it's ever posted. You're not handing this off to a black box, you're getting someone who treats your reputation like it matters, because mine is on the line too.",
     pricing_kicker:"Pricing", pricing_h2:"Try it for free. Then it's simple, flat pricing.", pricing_p:"No per-review fees, no long contracts.",
     pricing_free_banner:"<strong>Your first month is completely free.</strong> Full service, real reviews, real replies, zero cost. Continue afterward only if it's clearly worth it to you.",
     price1_name:"Starter", price1_desc:"For smaller practices and shops", price1_freetag:"Free for month 1", price1_permonth:"/ month after", price1_altprice:"or 990 Kč / month",
@@ -771,15 +786,15 @@ var translations = {
     signup_plan_starter:"Starter", signup_plan_growth:"Growth", signup_submit:"Send my details",
     faq_kicker:"FAQ", faq_h2:"Good questions",
     faq1_q:"Do I need to give you my Google password?", faq1_a:"No. You add me as a \"Manager\" on your Business Profile, which lets me reply to reviews and edit basic info. I can never remove your listing, manage other users, or access your Google account itself.",
-    faq2_q:"Are the replies AI-written?", faq2_a:"Every reply starts as an AI draft, then I read it, fix anything that sounds off, and only post it once it actually sounds like your business.",
+    faq2_q:"Will the replies actually sound like my business?", faq2_a:"Every reply is written to match your tone and the specific situation, then read and checked by me personally before it ever goes live under your name. Nothing generic goes out.",
     faq3_q:"What if I don't want to grant Manager access?", faq3_a:"That's fine. I can send you the drafted, reviewed replies each month by email instead, and you paste them in yourself. A little more work on your side, same quality of writing.",
     faq4_q:"Is my data safe?", faq4_a:"I only access what's needed to reply to reviews on your behalf, nothing more. Your data isn't sold or shared with anyone.",
     faq5_q:"Can I cancel anytime?", faq5_a:"Yes, including during the free month. No contracts, no lock-in.",
     cta_h2:"See it before you decide anything.", cta_p:"Your first month is free. No card, no contract, no risk.", cta_btn:"Start your free month",
-    footer_impressum_label:"Impressum", footer_operated:"ReviewFlow is operated by Florian Knäple", footer_email_label:"Email:",
+    footer_impressum_label:"Impressum", footer_operated:"Florian Replies is operated by Florian Knäple", footer_email_label:"Email:",
     footer_privacy_h:"Privacy", footer_privacy_p1:"I only access the review and basic profile data needed to reply on your behalf via Google's Manager access.",
     footer_privacy_p2:"Your data is never sold or shared with third parties.", footer_privacy_p3:"Full privacy policy available on request.",
-    footer_bottom_text:"ReviewFlow · Run by Florian Knäple",
+    footer_bottom_text:"Florian Replies · Run by Florian Knäple",
     stat_trust_lead:"The numbers behind it",
     stat1_num:"80%", stat1_label:"of consumers say they're more likely to use a business that replies to every review", stat1_source:"BrightLocal, Local Consumer Review Survey 2026",
     stat2_num:"50%", stat2_label:"won't choose a business after a generic, copy-paste reply — personal beats templated", stat2_source:"BrightLocal, Local Consumer Review Survey 2026",
@@ -799,11 +814,12 @@ var translations = {
     maps_review:"\"Freitagabend spontan nach einem Tisch gefragt, und sie haben trotzdem einen Platz gefunden. Essen war auch super.\"",
     maps_replylabel:"Antwort des Inhabers", maps_replydate:"vor 1 Tag",
     maps_reply:"Freitagabende sind bei uns schnell voll, umso schöner, dass es geklappt hat. Hoffe, der Rest des Abends war genauso gut, Markéta!",
-    hero_eyebrow:"● Ich lese jede KI-Antwort, bevor sie rausgeht",
+    hero_eyebrow:"● Ich lese und prüfe jede Antwort persönlich, bevor sie rausgeht",
     hero_h1:"Machen Sie aus jeder Bewertung einen Vertrauensbeweis.",
     hero_sub:"Ich schreibe eine konkrete, durchdachte Antwort auf jede Google-Bewertung Ihres Unternehmens und prüfe sie persönlich, bevor sie veröffentlicht wird. Der erste Monat ist kostenlos.",
     hero_cta1:"Gratismonat starten", hero_cta2:"So funktioniert's",
     hero_note:"Keine Kreditkarte nötig  ·  Kein Passwort teilen  ·  Jederzeit kündbar",
+    hero_diff:"Kein weiteres Dashboard zum Einrichten – ich erledige die Arbeit persönlich für Sie.",
     hero_mock_review:"\"Kurzfristig einen Termin gebraucht und trotzdem noch reinbekommen. Toller Service!\"",
     hero_mock_reviewer:"Jana N.",
     hero_mock_label:"Antwort des Inhabers",
@@ -821,13 +837,13 @@ var translations = {
     seo_card3_h:"Bekanntheit", seo_card3_p:"Wie bekannt und vertrauenswürdig Google Ihr Unternehmen einschätzt, maßgeblich aufgebaut durch Bewertungen.",
     seo_card4_h:"Interaktion", seo_card4_p:"Anrufe, Wegbeschreibungen und Website-Klicks von Ihrem Eintrag zeigen Google, dass Menschen Sie als handlungsrelevant empfinden.",
     seo_callout:"<p><strong>Was wirklich zählt:</strong> ein stetiger Strom aktueller Bewertungen schlägt einen Berg alter aus vergangenen Jahren, höhere Durchschnittsbewertungen verbessern die Klickrate, und Bewertungen, die natürlich erwähnen, was Sie tun, helfen Google zu verstehen, wofür Sie bekannt sind. Schnelles Antworten auf jede Bewertung signalisiert ein aktives Unternehmen, schafft Vertrauen beim nächsten Leser und ermutigt tendenziell mehr Menschen, ebenfalls eine Bewertung zu hinterlassen.</p>",
-    how_kicker:"So funktioniert's", how_h2:"Geschwindigkeit von KI, Urteilsvermögen eines Menschen, jedes Mal",
-    how_p:"Die KI schreibt den ersten Entwurf. Ich lese jede einzelne Antwort, bevor sie live geht.",
+    how_kicker:"So funktioniert's", how_h2:"Schnell im Entwurf, sorgfältig vor der Veröffentlichung",
+    how_p:"Jede Antwort lese und prüfe ich persönlich, bevor sie live geht.",
     how_step1_h:"Begrenzten Zugriff gewähren", how_step1_p:"Fügen Sie mich mit wenigen Klicks als Manager zu Ihrem Google-Unternehmensprofil hinzu. Ich kann auf Bewertungen antworten, aber nie Ihr Eigentum am Eintrag oder Konto berühren.",
-    how_step2_h:"KI entwirft, ich prüfe", how_step2_p:"Jede neue Bewertung erhält eine Antwort, die auf das eingeht, was der Kunde tatsächlich gesagt hat. Ich lese und passe sie persönlich an, bevor etwas freigegeben wird.",
+    how_step2_h:"Ich schreibe sie, ich prüfe sie", how_step2_p:"Jede neue Bewertung erhält eine Antwort, die auf das eingeht, was der Kunde tatsächlich gesagt hat. Ich lese und passe sie persönlich an, bevor etwas freigegeben wird.",
     how_step3_h:"Sie erhalten das Ergebnis", how_step3_p:"Die Antwort geht online, und Sie erhalten eine kurze monatliche Zusammenfassung dessen, was Kunden sagen, damit Sie stets informiert sind.",
     trust_h:"Ein neuer Service, geführt von einer echten Person",
-    trust_p:"Ich bin Florian, ansässig in Prag. ReviewFlow ist ein junger, persönlich geführter Service, kein gesichtsloses SaaS-Tool — und Bewertungen sind für mich kein Neuland. Ich bin Google Local Guide, Level 8, mit fast 300 selbst geschriebenen Bewertungen, kenne die Sache also von beiden Seiten: was eine Antwort echt wirken lässt und was nach Textbaustein klingt. Ich lese jede Bewertung selbst und prüfe jede Antwort, bevor sie unter Ihrem Namen veröffentlicht wird. Sie übergeben das nicht an eine Blackbox, sondern an jemanden, dem Ihr Ruf genauso wichtig ist, weil meiner ebenfalls davon abhängt.",
+    trust_p:"Ich bin Florian, ansässig in Prag. Florian Replies ist ein junger, persönlich geführter Service, kein gesichtsloses SaaS-Tool — und Bewertungen sind für mich kein Neuland. Ich bin Google Local Guide, Level 8, mit fast 300 selbst geschriebenen Bewertungen, kenne die Sache also von beiden Seiten: was eine Antwort echt wirken lässt und was nach Textbaustein klingt. Ich lese jede Bewertung selbst und prüfe jede Antwort, bevor sie unter Ihrem Namen veröffentlicht wird. Sie übergeben das nicht an eine Blackbox, sondern an jemanden, dem Ihr Ruf genauso wichtig ist, weil meiner ebenfalls davon abhängt.",
     pricing_kicker:"Preise", pricing_h2:"Kostenlos testen. Danach einfache Festpreise.", pricing_p:"Keine Gebühr pro Bewertung, keine langen Verträge.",
     pricing_free_banner:"<strong>Ihr erster Monat ist komplett kostenlos.</strong> Voller Service, echte Bewertungen, echte Antworten, keine Kosten. Danach nur weiterführen, wenn es sich für Sie klar lohnt.",
     price1_name:"Starter", price1_desc:"Für kleinere Praxen und Geschäfte", price1_freetag:"Monat 1 kostenlos", price1_permonth:"/ Monat danach", price1_altprice:"oder 990 Kč / Monat",
@@ -840,15 +856,15 @@ var translations = {
     signup_plan_starter:"Starter", signup_plan_growth:"Growth", signup_submit:"Angaben senden",
     faq_kicker:"FAQ", faq_h2:"Gute Fragen",
     faq1_q:"Muss ich Ihnen mein Google-Passwort geben?", faq1_a:"Nein. Sie fügen mich als \"Manager\" zu Ihrem Unternehmensprofil hinzu, wodurch ich auf Bewertungen antworten und Basisdaten bearbeiten kann. Ich kann Ihren Eintrag nie löschen, andere Nutzer verwalten oder auf Ihr Google-Konto selbst zugreifen.",
-    faq2_q:"Sind die Antworten KI-geschrieben?", faq2_a:"Jede Antwort beginnt als KI-Entwurf. Danach lese ich sie, ändere, was komisch klingt, und veröffentliche sie erst, wenn sie wirklich nach Ihrem Unternehmen klingt.",
+    faq2_q:"Klingen die Antworten wirklich nach meinem Unternehmen?", faq2_a:"Jede Antwort wird auf Ihren Ton und die jeweilige Situation zugeschnitten. Danach lese und prüfe ich sie persönlich, bevor sie unter Ihrem Namen veröffentlicht wird. Nichts Generisches geht raus.",
     faq3_q:"Was, wenn ich keinen Manager-Zugriff gewähren möchte?", faq3_a:"Kein Problem. Ich kann Ihnen die entworfenen, geprüften Antworten stattdessen monatlich per E-Mail senden, und Sie fügen sie selbst ein. Etwas mehr Aufwand für Sie, gleiche Qualität.",
     faq4_q:"Sind meine Daten sicher?", faq4_a:"Ich greife nur auf das zu, was für die Beantwortung nötig ist, nicht mehr. Ihre Daten werden nicht verkauft oder weitergegeben.",
     faq5_q:"Kann ich jederzeit kündigen?", faq5_a:"Ja, auch während des Gratismonats. Keine Verträge, keine Bindung.",
     cta_h2:"Überzeugen Sie sich, bevor Sie sich entscheiden.", cta_p:"Ihr erster Monat ist kostenlos. Keine Karte, kein Vertrag, kein Risiko.", cta_btn:"Gratismonat starten",
-    footer_impressum_label:"Impressum", footer_operated:"ReviewFlow wird betrieben von Florian Knäple", footer_email_label:"E-Mail:",
+    footer_impressum_label:"Impressum", footer_operated:"Florian Replies wird betrieben von Florian Knäple", footer_email_label:"E-Mail:",
     footer_privacy_h:"Datenschutz", footer_privacy_p1:"Ich greife nur auf die Bewertungs- und Basisprofildaten zu, die für die Beantwortung in Ihrem Namen über den Google-Manager-Zugriff nötig sind.",
     footer_privacy_p2:"Ihre Daten werden nie verkauft oder an Dritte weitergegeben.", footer_privacy_p3:"Vollständige Datenschutzerklärung auf Anfrage.",
-    footer_bottom_text:"ReviewFlow · Geführt von Florian Knäple",
+    footer_bottom_text:"Florian Replies · Geführt von Florian Knäple",
     stat_trust_lead:"Die Zahlen dahinter",
     stat1_num:"80%", stat1_label:"der Verbraucher nutzen eher ein Unternehmen, das auf jede Bewertung antwortet", stat1_source:"BrightLocal, Local Consumer Review Survey 2026",
     stat2_num:"50%", stat2_label:"wählen ein Unternehmen nicht, wenn die Antwort generisch wirkt — persönlich schlägt Textbaustein", stat2_source:"BrightLocal, Local Consumer Review Survey 2026",
@@ -868,11 +884,12 @@ var translations = {
     maps_review:"\"V pátek večer jsem narychlo poprosila o stůl a stejně se pro nás místo našlo. Jídlo bylo taky skvělé.\"",
     maps_replylabel:"Odpověď majitele", maps_replydate:"před 1 dnem",
     maps_reply:"Páteční večery máme rychle plné, o to větší radost, že to vyšlo. Doufám, že zbytek večera byl stejně fajn, Markéto!",
-    hero_eyebrow:"● Každou AI odpověď si přečtu, než ji odešlu",
+    hero_eyebrow:"● Každou odpověď si osobně přečtu a zkontroluji, než ji odešlu",
     hero_h1:"Proměňte každou recenzi v důvod vám důvěřovat.",
     hero_sub:"Na každou Google recenzi vaší firmy napíšu konkrétní, promyšlenou odpověď a osobně ji zkontroluji, než se zveřejní. První měsíc máte zdarma.",
     hero_cta1:"Vyzkoušet měsíc zdarma", hero_cta2:"Jak to funguje",
     hero_note:"Bez karty  ·  Bez sdílení hesla  ·  Zrušení kdykoliv",
+    hero_diff:"Žádný další dashboard k nastavování – práci za vás odvedu osobně já.",
     hero_mock_review:"\"Potřebovala jsem termín narychlo a stejně mě vzali. Skvělý servis!\"",
     hero_mock_reviewer:"Jana N.",
     hero_mock_label:"Odpověď majitele",
@@ -890,13 +907,13 @@ var translations = {
     seo_card3_h:"Významnost", seo_card3_p:"Jak známou a důvěryhodnou vaši firmu Google považuje, což se z velké části buduje díky recenzím.",
     seo_card4_h:"Zapojení", seo_card4_p:"Volání, žádosti o trasu a kliknutí na web z vašeho záznamu signalizují Googlu, že vás lidé považují za hodné akce.",
     seo_callout:"<p><strong>Co skutečně pomáhá:</strong> stálý proud čerstvých recenzí je lepší než hromada starých z minulých let, vyšší průměrné hodnocení zlepšuje míru prokliku a recenze, které přirozeně zmiňují, co děláte, pomáhají Googlu pochopit, čím jste známí. Rychlá odpověď na každou recenzi signalizuje aktivní firmu, buduje důvěru u dalšího čtenáře a obvykle motivuje více lidí, aby recenzi nechali také.</p>",
-    how_kicker:"Jak to funguje", how_h2:"Rychlost AI, lidský úsudek, pokaždé",
-    how_p:"AI napíše první návrh. Každou odpověď si přečtu, než jde ven.",
+    how_kicker:"Jak to funguje", how_h2:"Rychlý návrh, pečlivá kontrola před zveřejněním",
+    how_p:"Každou odpověď si osobně přečtu a zkontroluji, než jde ven.",
     how_step1_h:"Udělte omezený přístup", how_step1_p:"Přidejte mě jako Správce vašeho Google Firemního profilu na pár kliknutí. Mohu odpovídat na recenze, ale nikdy se nedostanu k vlastnictví záznamu ani účtu.",
-    how_step2_h:"AI navrhne, já zkontroluji", how_step2_p:"Ke každé nové recenzi vznikne odpověď podle toho, co zákazník skutečně napsal, a já ji osobně přečtu a upravím, než cokoliv schválím.",
+    how_step2_h:"Napíšu ji, zkontroluji ji", how_step2_p:"Ke každé nové recenzi vznikne odpověď podle toho, co zákazník skutečně napsal, a já ji osobně přečtu a upravím, než cokoliv schválím.",
     how_step3_h:"Dostanete výsledek", how_step3_p:"Odpověď se zveřejní a vy dostanete krátký měsíční přehled toho, co zákazníci říkají, abyste měli stále přehled.",
     trust_h:"Nová služba, kterou vede skutečný člověk",
-    trust_p:"Jsem Florian, žiji v Praze. ReviewFlow je mladá služba s osobním přístupem, ne bezduchý SaaS nástroj — a recenze pro mě nejsou nic nového. Jsem Google Local Guide, úroveň 8, s téměř 300 vlastními napsanými recenzemi, takže tohle znám z obou stran: co dělá odpověď opravdovou a co zní jako šablona. Osobně čtu každou recenzi a kontroluji každou odpověď, než se zveřejní pod vaším jménem. Nepředáváte to černé skříňce, ale někomu, komu na vaší pověsti záleží stejně, protože jde i o tu jeho.",
+    trust_p:"Jsem Florian, žiji v Praze. Florian Replies je mladá služba s osobním přístupem, ne bezduchý SaaS nástroj — a recenze pro mě nejsou nic nového. Jsem Google Local Guide, úroveň 8, s téměř 300 vlastními napsanými recenzemi, takže tohle znám z obou stran: co dělá odpověď opravdovou a co zní jako šablona. Osobně čtu každou recenzi a kontroluji každou odpověď, než se zveřejní pod vaším jménem. Nepředáváte to černé skříňce, ale někomu, komu na vaší pověsti záleží stejně, protože jde i o tu jeho.",
     pricing_kicker:"Ceník", pricing_h2:"Vyzkoušejte zdarma. Pak jednoduché, pevné ceny.", pricing_p:"Žádné poplatky za recenzi, žádné dlouhé smlouvy.",
     pricing_free_banner:"<strong>První měsíc je zcela zdarma.</strong> Plná služba, skutečné recenze, skutečné odpovědi, žádné náklady. Pokračujte pak jen tehdy, pokud se vám to jasně vyplatí.",
     price1_name:"Starter", price1_desc:"Pro menší provozy a obchody", price1_freetag:"1. měsíc zdarma", price1_permonth:"/ měsíc poté", price1_altprice:"nebo 990 Kč / měsíc",
@@ -909,15 +926,15 @@ var translations = {
     signup_plan_starter:"Starter", signup_plan_growth:"Growth", signup_submit:"Odeslat údaje",
     faq_kicker:"Časté dotazy", faq_h2:"Dobré otázky",
     faq1_q:"Musím vám dát své heslo do Googlu?", faq1_a:"Ne. Přidáte mě jako „Správce“ svého Firemního profilu, což mi umožní odpovídat na recenze a upravovat základní údaje. Nikdy nemohu smazat váš záznam, spravovat další uživatele ani přistupovat k vašemu Google účtu samotnému.",
-    faq2_q:"Jsou odpovědi psané pomocí AI?", faq2_a:"Každá odpověď začíná jako návrh od AI. Pak si ji přečtu, upravím, co zní kostrbatě, a zveřejním ji, až opravdu zní jako vaše firma.",
+    faq2_q:"Budou odpovědi opravdu znít jako moje firma?", faq2_a:"Každá odpověď je napsaná tak, aby odpovídala vašemu tónu a konkrétní situaci, a než se zveřejní pod vaším jménem, osobně si ji přečtu a zkontroluji. Nic obecného ven nejde.",
     faq3_q:"Co když nechci udělit přístup Správce?", faq3_a:"To je v pořádku. Mohu vám místo toho posílat navržené, zkontrolované odpovědi měsíčně e-mailem a vy je vložíte sami. O trochu víc práce na vaší straně, stejná kvalita.",
     faq4_q:"Jsou moje data v bezpečí?", faq4_a:"Přistupuji jen k tomu, co je potřeba pro odpovídání na recenze vaším jménem, nic víc. Vaše data se neprodávají ani nesdílí.",
     faq5_q:"Můžu kdykoliv zrušit?", faq5_a:"Ano, i během měsíce zdarma. Žádné smlouvy, žádný závazek.",
     cta_h2:"Přesvědčte se sami, než se rozhodnete.", cta_p:"První měsíc je zdarma. Bez karty, bez smlouvy, bez rizika.", cta_btn:"Vyzkoušet měsíc zdarma",
-    footer_impressum_label:"Právní informace", footer_operated:"ReviewFlow provozuje Florian Knäple", footer_email_label:"E-mail:",
+    footer_impressum_label:"Právní informace", footer_operated:"Florian Replies provozuje Florian Knäple", footer_email_label:"E-mail:",
     footer_privacy_h:"Ochrana soukromí", footer_privacy_p1:"Přistupuji pouze k datům recenzí a základního profilu potřebným k odpovídání vaším jménem prostřednictvím přístupu Správce Google.",
     footer_privacy_p2:"Vaše data se nikdy neprodávají ani nesdílí s třetími stranami.", footer_privacy_p3:"Kompletní zásady ochrany soukromí na vyžádání.",
-    footer_bottom_text:"ReviewFlow · Provozuje Florian Knäple",
+    footer_bottom_text:"Florian Replies · Provozuje Florian Knäple",
     stat_trust_lead:"Čísla, která za tím stojí",
     stat1_num:"80%", stat1_label:"spotřebitelů uvádí, že spíše využijí firmu, která odpovídá na každou recenzi", stat1_source:"BrightLocal, Local Consumer Review Survey 2026",
     stat2_num:"50%", stat2_label:"si firmu nevybere, pokud je odpověď obecná a šablonovitá — osobní přístup vyhrává", stat2_source:"BrightLocal, Local Consumer Review Survey 2026",
