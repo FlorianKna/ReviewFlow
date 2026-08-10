@@ -122,6 +122,10 @@
     padding: 3px 10px; border-radius: 999px; margin-bottom: 12px;
   }
   @media (max-width: 480px) { .hero-mock { max-width: 320px; } }
+  .hero-mock-carousel { margin: 48px auto 0; max-width: 740px; }
+  .hero-mock-carousel .carousel-track { padding: 4px 4px 10px; }
+  #heroTrack .mock-card { flex: 0 0 300px; scroll-snap-align: start; max-width: 300px; }
+  @media (max-width: 480px) { #heroTrack .mock-card { flex: 0 0 260px; max-width: 260px; } }
   @media (max-width: 640px) {
     h1 { font-size: 32px; }
     .hero { padding: 84px 20px 56px; }
@@ -347,19 +351,47 @@
     </div>
     <div class="hero-diff" data-i18n="hero_diff">Not another dashboard to set up. I personally do the work for you.</div>
     <div class="hero-note" data-i18n="hero_note">No card required &nbsp;·&nbsp; No password sharing &nbsp;·&nbsp; Cancel anytime</div>
-    <div class="hero-mock">
-      <div class="mock-card">
-        <div class="mock-stars">★★★★★</div>
-        <p class="mock-reviewtext" data-i18n="hero_mock_review">"Booked an appointment last minute and they still managed to fit me in. Great service!"</p>
-        <div class="reviewer-row">
-          <div class="mini-avatar" style="background:#0d9488;">J</div>
-          <div class="mock-reviewer" data-i18n="hero_mock_reviewer">Jessica N.</div>
+    <div class="hero-mock-carousel carousel-wrap">
+      <button class="carousel-arrow prev" onclick="scrollCarousel('heroTrack',-1)" aria-label="Previous">&#8249;</button>
+      <div class="carousel-track" id="heroTrack">
+        <div class="mock-card">
+          <div class="mock-stars">★★★★★</div>
+          <p class="mock-reviewtext" data-i18n="hero_mock_review">"Booked an appointment last minute and they still managed to fit me in. Great service!"</p>
+          <div class="reviewer-row">
+            <div class="mini-avatar" style="background:#0d9488;">J</div>
+            <div class="mock-reviewer" data-i18n="hero_mock_reviewer">Jessica N.</div>
+          </div>
+          <div class="mock-reply">
+            <div class="mock-reply-label" data-i18n="hero_mock_label">Response from the owner</div>
+            <p data-i18n="hero_mock_reply">Ha, cutting it close, but we made it work! Really glad we could squeeze you in, Jessica. See you at the next one.</p>
+          </div>
         </div>
-        <div class="mock-reply">
-          <div class="mock-reply-label" data-i18n="hero_mock_label">Response from the owner</div>
-          <p data-i18n="hero_mock_reply">Ha, cutting it close, but we made it work! Really glad we could squeeze you in, Jessica. See you at the next one.</p>
+        <div class="mock-card">
+          <div class="mock-stars">★★★★★</div>
+          <p class="mock-reviewtext" data-i18n="hero_mock2_review">"Ordered ahead on the app and it was ready exactly on time, staff even remembered my usual order."</p>
+          <div class="reviewer-row">
+            <div class="mini-avatar" style="background:#0ea5e9;">S</div>
+            <div class="mock-reviewer" data-i18n="hero_mock2_reviewer">Sophie L.</div>
+          </div>
+          <div class="mock-reply">
+            <div class="mock-reply-label" data-i18n="hero_mock_label">Response from the owner</div>
+            <p data-i18n="hero_mock2_reply">That's the goal, Sophie! Glad the app made it quick. See you again soon.</p>
+          </div>
+        </div>
+        <div class="mock-card">
+          <div class="mock-stars">★★★★★</div>
+          <p class="mock-reviewtext" data-i18n="hero_mock3_review">"My dog is usually nervous at groomers but they were so patient with her, and the cut looked great."</p>
+          <div class="reviewer-row">
+            <div class="mini-avatar" style="background:#ec4899;">A</div>
+            <div class="mock-reviewer" data-i18n="hero_mock3_reviewer">Anna B.</div>
+          </div>
+          <div class="mock-reply">
+            <div class="mock-reply-label" data-i18n="hero_mock_label">Response from the owner</div>
+            <p data-i18n="hero_mock3_reply">Dogs can tell who's patient with them! So glad she felt comfortable, Anna. See you both next time.</p>
+          </div>
         </div>
       </div>
+      <button class="carousel-arrow next" onclick="scrollCarousel('heroTrack',1)" aria-label="Next">&#8250;</button>
     </div>
   </div>
 </section>
@@ -780,6 +812,8 @@ var translations = {
     hero_mock_reviewer:"Jessica N.",
     hero_mock_label:"Response from the owner",
     hero_mock_reply:"Ha, cutting it close, but we made it work! Really glad we could squeeze you in, Jessica. See you at the next one.",
+    hero_mock2_reviewer:"Sophie L.", hero_mock2_review:"\"Ordered ahead on the app and it was ready exactly on time, staff even remembered my usual order.\"", hero_mock2_reply:"That's the goal, Sophie! Glad the app made it quick. See you again soon.",
+    hero_mock3_reviewer:"Anna B.", hero_mock3_review:"\"My dog is usually nervous at groomers but they were so patient with her, and the cut looked great.\"", hero_mock3_reply:"Dogs can tell who's patient with them! So glad she felt comfortable, Anna. See you both next time.",
     why_kicker:"Why it matters", why_h2:"Reviews aren't background noise. They're your storefront.",
     why_p:"Most people read reviews before they read anything else about you. What they find next quietly decides whether they reach out.",
     why_card1_h:"First impression, handled", why_card1_p:"A sharp reply is often the first real thing a prospect learns about you, before you ever speak to them.",
@@ -852,6 +886,8 @@ var translations = {
     hero_mock_reviewer:"Julia N.",
     hero_mock_label:"Antwort des Inhabers",
     hero_mock_reply:"Puh, das war knapp, aber wir haben es hinbekommen! Freut uns wirklich, dass es kurzfristig geklappt hat, Julia. Bis zum nächsten Mal.",
+    hero_mock2_reviewer:"Sabine L.", hero_mock2_review:"\"Habe über die App vorbestellt, und es war pünktlich fertig, das Team kannte sogar schon meine übliche Bestellung.\"", hero_mock2_reply:"Genau das ist unser Ziel, Sabine! Freut uns, dass die App das Ganze schnell gemacht hat. Bis bald.",
+    hero_mock3_reviewer:"Andrea B.", hero_mock3_review:"\"Mein Hund ist beim Groomer sonst immer nervös, aber sie waren so geduldig mit ihr, und der Schnitt sah super aus.\"", hero_mock3_reply:"Hunde spüren, wer geduldig mit ihnen ist! Freut uns wirklich, dass sie sich wohlgefühlt hat, Andrea. Bis zum nächsten Mal, ihr beide.",
     why_kicker:"Warum es wichtig ist", why_h2:"Bewertungen sind kein Hintergrundrauschen. Sie sind Ihr Schaufenster.",
     why_p:"Die meisten Menschen lesen zuerst Bewertungen, bevor sie sonst etwas über Sie erfahren. Was sie dort finden, entscheidet leise, ob sie sich melden.",
     why_card1_h:"Erster Eindruck, gesichert", why_card1_p:"Eine gute Antwort ist oft das Erste, was ein Interessent wirklich über Sie erfährt, noch bevor Sie miteinander sprechen.",
@@ -924,6 +960,8 @@ var translations = {
     hero_mock_reviewer:"Jana N.",
     hero_mock_label:"Odpověď majitele",
     hero_mock_reply:"Uf, bylo to na poslední chvíli, ale zvládli jsme to! Moc nás těší, že jsme vás i tak stihli vzít, Jano. Příště zas na viděnou.",
+    hero_mock2_reviewer:"Simona L.", hero_mock2_review:"\"Objednala jsem přes appku předem a bylo to přesně na čas, personál si dokonce pamatoval mou obvyklou objednávku.\"", hero_mock2_reply:"Přesně o to nám jde, Simono! Moc nás těší, že appka vše zrychlila. Zas brzy na viděnou.",
+    hero_mock3_reviewer:"Adéla B.", hero_mock3_review:"\"Můj pes bývá u groomera nervózní, ale byli s ní tak trpěliví, a střih vypadal skvěle.\"", hero_mock3_reply:"Psi poznají, kdo je s nimi trpělivý! Moc nás těší, že se cítila dobře, Adélo. Zas příště, vy dva.",
     why_kicker:"Proč na tom záleží", why_h2:"Recenze nejsou šum na pozadí. Jsou vaší výlohou.",
     why_p:"Většina lidí si nejdřív přečte recenze, než se dozví cokoliv jiného o vás. To, co tam najdou, tiše rozhodne, jestli se ozvou.",
     why_card1_h:"První dojem vyřešen", why_card1_p:"Kvalitní odpověď je často první skutečná věc, kterou se o vás potenciální zákazník dozví, ještě než spolu promluvíte.",
